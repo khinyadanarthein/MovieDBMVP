@@ -1,0 +1,6 @@
+framework module Pods_MovieDBMVPTests {
+  umbrella header "Pods-MovieDBMVPTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
