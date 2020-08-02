@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GenreTitleCollectionViewCell" customModule="MovieDBMVP" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="131" height="65"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="131" height="65"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5N-5a-qfq">
+                        <rect key="frame" x="0.0" y="0.0" width="131" height="65"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvh-xq-sDW">
+                                <rect key="frame" x="0.0" y="0.0" width="131" height="65"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="primary-color"/>
+                        <constraints>
+                            <constraint firstItem="Cvh-xq-sDW" firstAttribute="top" secondItem="f5N-5a-qfq" secondAttribute="top" id="NX6-ud-5we"/>
+                            <constraint firstItem="Cvh-xq-sDW" firstAttribute="leading" secondItem="f5N-5a-qfq" secondAttribute="leading" id="YZ9-oo-SBL"/>
+                            <constraint firstAttribute="bottom" secondItem="Cvh-xq-sDW" secondAttribute="bottom" id="rKL-3H-NOM"/>
+                            <constraint firstAttribute="trailing" secondItem="Cvh-xq-sDW" secondAttribute="trailing" id="vc8-Nb-lwe"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="f5N-5a-qfq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SQO-q0-wwX"/>
+                <constraint firstItem="f5N-5a-qfq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nHU-Wu-BKy"/>
+                <constraint firstAttribute="bottom" secondItem="f5N-5a-qfq" secondAttribute="bottom" id="tl4-UO-fek"/>
+                <constraint firstAttribute="trailing" secondItem="f5N-5a-qfq" secondAttribute="trailing" id="ydR-rL-29R"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="131" height="65"/>
+            <point key="canvasLocation" x="196.37681159420291" y="146.98660714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="primary-color">
+            <color red="0.048232990859969384" green="0.12160754142139704" blue="0.21180159488910344" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

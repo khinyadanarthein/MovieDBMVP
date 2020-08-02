@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="149" height="56"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oc1-mt-X9J">
+                    <rect key="frame" x="0.0" y="0.0" width="149" height="56"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZz-V0-DXw">
+                            <rect key="frame" x="0.0" y="0.0" width="149" height="56"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="NZz-V0-DXw" secondAttribute="trailing" id="4sY-CA-3vc"/>
+                        <constraint firstItem="NZz-V0-DXw" firstAttribute="leading" secondItem="Oc1-mt-X9J" secondAttribute="leading" id="5rJ-6s-ZKn"/>
+                        <constraint firstAttribute="bottom" secondItem="NZz-V0-DXw" secondAttribute="bottom" id="Bah-yv-V95"/>
+                        <constraint firstItem="NZz-V0-DXw" firstAttribute="top" secondItem="Oc1-mt-X9J" secondAttribute="top" id="XDt-YZ-Wfy"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Oc1-mt-X9J" secondAttribute="trailing" id="E9M-XM-fYI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Oc1-mt-X9J" secondAttribute="bottom" id="KLq-cN-3fs"/>
+                <constraint firstItem="Oc1-mt-X9J" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Mfk-cv-Yxz"/>
+                <constraint firstItem="Oc1-mt-X9J" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aWS-IP-4tY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-54.347826086956523" y="-139.28571428571428"/>
+        </view>
+    </objects>
+</document>
