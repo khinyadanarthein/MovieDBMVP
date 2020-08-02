@@ -70,11 +70,11 @@ class MainViewController: UIViewController {
     }
     
     func sectionLayoutForPagingView() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width), heightDimension: .absolute(235))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width), heightDimension: .fractionalHeight(1))
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width), heightDimension: .absolute(235))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width), heightDimension: .absolute(300))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
         
@@ -226,9 +226,5 @@ extension MainViewController : UICollectionViewDataSource, UICollectionViewDeleg
         
         return UICollectionViewCell()
     }
-    
-}
-
-extension MainViewController : UIScrollViewDelegate {
     
 }
