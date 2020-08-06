@@ -43,7 +43,7 @@
     </objects>
     <resources>
         <namedColor name="primary-color">
-            <color red="0.048232990859969384" green="0.12160754142139704" blue="0.21180159488910344" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.048000000417232513" green="0.12200000137090683" blue="0.21199999749660492" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

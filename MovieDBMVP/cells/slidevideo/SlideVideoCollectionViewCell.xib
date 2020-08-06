@@ -23,24 +23,12 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="netflix-logo" translatesAutoresizingMaskIntoConstraints="NO" id="fGA-A9-8b8">
                                 <rect key="frame" x="0.0" y="0.0" width="317" height="200"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oig-fw-KfA">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oig-fw-KfA" customClass="PlayButton" customModule="MovieDBMVP" customModuleProvider="target">
                                 <rect key="frame" x="123.5" y="65" width="70" height="70"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Rg4-X5-DUg">
-                                        <rect key="frame" x="20" y="21.5" width="30" height="26.5"/>
-                                        <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="eUV-QE-akc"/>
-                                            <constraint firstAttribute="height" constant="30" id="ufu-Tj-vVx"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="tint-color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="Ljh-hg-Snf"/>
                                     <constraint firstAttribute="height" constant="70" id="QW7-DX-XVP"/>
-                                    <constraint firstItem="Rg4-X5-DUg" firstAttribute="centerX" secondItem="oig-fw-KfA" secondAttribute="centerX" id="dBw-1h-xWB"/>
-                                    <constraint firstItem="Rg4-X5-DUg" firstAttribute="centerY" secondItem="oig-fw-KfA" secondAttribute="centerY" id="uMg-CI-J6O"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
@@ -75,9 +63,11 @@
     </objects>
     <resources>
         <image name="netflix-logo" width="636" height="636"/>
-        <image name="play.fill" catalog="system" width="58" height="64"/>
         <namedColor name="primary-color">
-            <color red="0.048232990859969384" green="0.12160754142139704" blue="0.21180159488910344" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.048000000417232513" green="0.12200000137090683" blue="0.21199999749660492" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="tint-color">
+            <color red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

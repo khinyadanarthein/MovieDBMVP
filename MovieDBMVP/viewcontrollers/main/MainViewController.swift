@@ -12,7 +12,7 @@ enum HomeSection : Int {
     case PagingVideo = 0
     case BestPopular = 1
     case ShowTime = 2
-    case GenreTitle = 3
+    case GenreGroup = 3
     case Showcase = 4
     case Actor = 5
 }
@@ -25,8 +25,11 @@ class MainViewController: UIViewController {
         HomeSection.PagingVideo,
         HomeSection.BestPopular,
         HomeSection.ShowTime,
-        HomeSection.GenreTitle
+        HomeSection.GenreGroup
     ]
+    
+    var mDelegate : GenreTileDelegate!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +40,10 @@ class MainViewController: UIViewController {
             
         mainCollectionView.register(UINib(nibName: ShowTimeCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ShowTimeCollectionViewCell.identifier)
         
-        mainCollectionView.register(UINib(nibName: GenreTitleCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: GenreTitleCollectionViewCell.identifier)
+        mainCollectionView.register(UINib(nibName: GenreGroupCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: GenreGroupCollectionViewCell.identifier)
 
+//        mainCollectionView.register(UINib(nibName: BestPopularCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: BestPopularCollectionViewCell.identifier)
+        
         mainCollectionView.dataSource = self
         mainCollectionView.delegate = self
         
@@ -60,8 +65,11 @@ class MainViewController: UIViewController {
             case HomeSection.ShowTime:
                 return self.sectionLayoutForShowTimeView()
 
-            case HomeSection.GenreTitle :
+            case HomeSection.GenreGroup :
                 return self.sectionLayoutForGenreTitleView()
+//
+//            case HomeSection.GenreList :
+//                return self.sectionLayoutForGenreTitleView()
             default:
                 fatalError("Crash")
             }
@@ -70,11 +78,11 @@ class MainViewController: UIViewController {
     }
     
     func sectionLayoutForPagingView() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width), heightDimension: .fractionalHeight(1))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width), heightDimension: .absolute(255))
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width), heightDimension: .absolute(300))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width), heightDimension: .absolute(255))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
         
@@ -83,7 +91,7 @@ class MainViewController: UIViewController {
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .paging
         //section.interGroupSpacing = 10
-        section.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 35, leading: 0, bottom: 5, trailing: 0)
         
         return section
     }
@@ -127,11 +135,11 @@ class MainViewController: UIViewController {
     }
     
     func sectionLayoutForGenreTitleView() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width / 4), heightDimension: .absolute(35))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width), heightDimension: .absolute(350))
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute((self.view.frame.width / 4) - 40), heightDimension: .absolute(35))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width), heightDimension: .absolute(350))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
         
@@ -141,6 +149,25 @@ class MainViewController: UIViewController {
         section.orthogonalScrollingBehavior = .continuous
         section.interGroupSpacing = 10
         section.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10)
+        
+        return section
+    }
+    
+    func sectionLayoutForGenreSlideView() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width / 3), heightDimension: .absolute(300))
+        
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute((self.view.frame.width / 3) - 30), heightDimension: .absolute(300))
+        
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
+        
+        //group.interItemSpacing = NSCollectionLayoutSpacing.fixed(10)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .continuous
+        section.interGroupSpacing = 10
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
         
         return section
     }
@@ -165,8 +192,8 @@ extension MainViewController : UICollectionViewDataSource, UICollectionViewDeleg
         case HomeSection.ShowTime.rawValue :
             return 1
             
-        case HomeSection.GenreTitle.rawValue :
-            return 10
+        case HomeSection.GenreGroup.rawValue :
+            return 1
             
         default:
             break
@@ -177,12 +204,7 @@ extension MainViewController : UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         switch indexPath.section {
-//        case HomeSection.SlideVideo.rawValue:
-//            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SlideVideoCollectionViewCell.identifier, for: indexPath) as? SlideVideoCollectionViewCell else {
-//                return UICollectionViewCell()
-//            }
-//            return cell
-           
+
         case HomeSection.PagingVideo.rawValue:
           guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PagingCollectionViewCell.identifier, for: indexPath) as? PagingCollectionViewCell else {
               return UICollectionViewCell()
@@ -201,11 +223,10 @@ extension MainViewController : UICollectionViewDataSource, UICollectionViewDeleg
             }
             return cell
             
-        case HomeSection.GenreTitle.rawValue:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GenreTitleCollectionViewCell.identifier, for: indexPath) as? GenreTitleCollectionViewCell else {
+        case HomeSection.GenreGroup.rawValue:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GenreGroupCollectionViewCell.identifier, for: indexPath) as? GenreGroupCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            
             return cell
 
 //        case NextSection.ForYou.rawValue:
@@ -227,4 +248,13 @@ extension MainViewController : UICollectionViewDataSource, UICollectionViewDeleg
         return UICollectionViewCell()
     }
     
+}
+
+extension MainViewController : UIScrollViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+       
+        
+    }
 }
