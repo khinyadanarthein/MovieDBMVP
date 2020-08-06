@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class GenreGroupCollectionViewCell: UICollectionViewCell {
     
@@ -16,13 +17,18 @@ class GenreGroupCollectionViewCell: UICollectionViewCell {
     static var identifier : String {
         return "GenreGroupCollectionViewCell"
     }
+    
+    var genreList = [GenreVO]()
+    var movieList = [GenreMovieVO]()
+    var cellMovieList : [BestMovieVO]!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
         cvGenreTitle.register(UINib(nibName: GenreTitleCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: GenreTitleCollectionViewCell.identifier)
         
-        cvGenreList.register(UINib(nibName: BestPopularCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: BestPopularCollectionViewCell.identifier)
+        cvGenreList.register(UINib(nibName: GenreMovieCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: GenreMovieCollectionViewCell.identifier)
         
         cvGenreTitle.dataSource = self
         cvGenreList.dataSource = self
@@ -33,6 +39,8 @@ class GenreGroupCollectionViewCell: UICollectionViewCell {
         cvGenreList.setCollectionViewLayout(generateCompositionalLayoutForList(), animated: false)
         
         cvGenreTitle.selectItem(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: .left)
+        
+        
     }
     
     func generateCompositionalLayoutForTitle() -> UICollectionViewCompositionalLayout {
@@ -70,11 +78,11 @@ class GenreGroupCollectionViewCell: UICollectionViewCell {
     }
     
     func sectionLayoutForGenreSlideView() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(self.contentView.frame.width / 2), heightDimension: .absolute(300))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(170), heightDimension: .absolute(300))
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute((self.contentView.frame.width / 2) - 20), heightDimension: .absolute(300))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(150), heightDimension: .absolute(300))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
         
@@ -93,10 +101,10 @@ class GenreGroupCollectionViewCell: UICollectionViewCell {
 extension GenreGroupCollectionViewCell : UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == cvGenreTitle {
-            return 10
+            return self.genreList.count
             
         } else {
-            return 20
+            return self.movieList.count
         }
     }
     
@@ -106,15 +114,17 @@ extension GenreGroupCollectionViewCell : UICollectionViewDataSource, UICollectio
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GenreTitleCollectionViewCell.identifier, for: indexPath) as? GenreTitleCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            
+            cell.mData = genreList[indexPath.row]
             if cell.isSelected {
                 cell.viewSelectedColor.backgroundColor = UIColor(named: "tint-color")
             }
+            
             return cell
         } else {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BestPopularCollectionViewCell.identifier, for: indexPath) as? BestPopularCollectionViewCell else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GenreMovieCollectionViewCell.identifier, for: indexPath) as? GenreMovieCollectionViewCell else {
                 return UICollectionViewCell()
             }
+            cell.mData = movieList[indexPath.row]
             return cell
         }
         //return UICollectionViewCell()

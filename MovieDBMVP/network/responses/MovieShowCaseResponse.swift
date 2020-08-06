@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+// MARK: - MovieShowCaseResponse
+class MovieShowCaseResponse: Codable {
+    let page, totalResults, totalPages: Int
+    let results: [MovieShowCaseVO]
+
+    enum CodingKeys: String, CodingKey {
+        case page
+        case totalResults = "total_results"
+        case totalPages = "total_pages"
+        case results
+    }
+
+    init(page: Int, totalResults: Int, totalPages: Int, results: [MovieShowCaseVO]) {
+        self.page = page
+        self.totalResults = totalResults
+        self.totalPages = totalPages
+        self.results = results
+    }
+}

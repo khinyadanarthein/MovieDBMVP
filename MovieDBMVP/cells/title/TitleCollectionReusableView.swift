@@ -10,6 +10,14 @@ import UIKit
 
 class TitleCollectionReusableView: UICollectionReusableView {
 
+    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var lbTitleName: UILabel!
+    @IBOutlet weak var lbSeeMore: UnderlinedLabel!
+    
+    static var identifier : String {
+        return "TitleCollectionReusableView"
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

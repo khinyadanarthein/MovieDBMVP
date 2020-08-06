@@ -18,11 +18,13 @@ class PagingCollectionViewCell: UICollectionViewCell {
     }
     var currentPage = 0
     
-    var dummeyItemCount = 5
+    //var dummeyItemCount = 5
+    var slideVideoList : [MainVideoVO]?
+    var movieVideo : MovieVideoDetailVO?
+    var mDelegate : VideoPlayDelegate!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        self.slideIndex.numberOfPages = dummeyItemCount
         
         cvSlideVideo.register(UINib(nibName: SlideVideoCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: SlideVideoCollectionViewCell.identifier)
         cvSlideVideo.dataSource = self
@@ -40,12 +42,12 @@ class PagingCollectionViewCell: UICollectionViewCell {
     }
     
     func sectionLayoutForSlideView() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(self.contentView.frame.width), heightDimension: .absolute(200))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(self.contentView.frame.width), heightDimension: .fractionalHeight(1))
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(self.contentView.frame.width), heightDimension: .absolute(200))
-        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(self.contentView.frame.width), heightDimension: .fractionalHeight(1))
+
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
         
         //group.interItemSpacing = NSCollectionLayoutSpacing.fixed(10)
@@ -53,8 +55,11 @@ class PagingCollectionViewCell: UICollectionViewCell {
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .paging
         //section.interGroupSpacing = 10
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
-        
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0)
+        section.visibleItemsInvalidationHandler = { (visibleItems, point, env) -> Void in
+            //            print(visibleItems.last?.indexPath.row)
+            self.slideIndex.currentPage = visibleItems.last?.indexPath.row ?? 0
+        }
         return section
     }
     
@@ -67,13 +72,17 @@ extension PagingCollectionViewCell : UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dummeyItemCount
+        self.slideIndex.numberOfPages = slideVideoList?.count ?? 0
+        print(slideIndex.numberOfPages)
+        return self.slideVideoList?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SlideVideoCollectionViewCell.identifier, for: indexPath) as? SlideVideoCollectionViewCell else {
             return UICollectionViewCell()
         }
+        cell.mData = self.slideVideoList![indexPath.row]
+        cell.mDelegate = self.mDelegate
         return cell
     }
     

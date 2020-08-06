@@ -1,17 +1,69 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TitleCollectionReusableView" customModule="MovieDBMVP" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="TitleCollectionReusableView" customModule="MovieDBMVP" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="332" height="95"/>
             <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpS-ym-s0J">
+                    <rect key="frame" x="0.0" y="0.0" width="332" height="95"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AlG-AJ-uug">
+                            <rect key="frame" x="15" y="0.0" width="43" height="95"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZ7-2V-QMZ" customClass="UnderlinedLabel" customModule="MovieDBMVP" customModuleProvider="target">
+                            <rect key="frame" x="256" y="0.0" width="61" height="95"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                            <color key="textColor" name="tint-color"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="primary-color"/>
+                    <constraints>
+                        <constraint firstItem="aZ7-2V-QMZ" firstAttribute="top" secondItem="gpS-ym-s0J" secondAttribute="top" id="35O-h8-Ksh"/>
+                        <constraint firstItem="AlG-AJ-uug" firstAttribute="top" secondItem="gpS-ym-s0J" secondAttribute="top" id="61N-yY-TuR"/>
+                        <constraint firstAttribute="bottom" secondItem="AlG-AJ-uug" secondAttribute="bottom" id="KPc-uO-PAY"/>
+                        <constraint firstItem="AlG-AJ-uug" firstAttribute="leading" secondItem="gpS-ym-s0J" secondAttribute="leading" constant="15" id="MsY-cQ-9dd"/>
+                        <constraint firstItem="AlG-AJ-uug" firstAttribute="centerY" secondItem="gpS-ym-s0J" secondAttribute="centerY" id="Obc-So-Hjx"/>
+                        <constraint firstAttribute="trailing" secondItem="aZ7-2V-QMZ" secondAttribute="trailing" constant="15" id="kEG-VR-DlD"/>
+                        <constraint firstItem="aZ7-2V-QMZ" firstAttribute="centerY" secondItem="AlG-AJ-uug" secondAttribute="centerY" id="nzz-aH-0QY"/>
+                        <constraint firstAttribute="bottom" secondItem="aZ7-2V-QMZ" secondAttribute="bottom" id="yqW-rN-3Zo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="gpS-ym-s0J" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="Ied-7U-Abj"/>
+                <constraint firstAttribute="bottom" secondItem="gpS-ym-s0J" secondAttribute="bottom" id="Vxg-Uj-CMq"/>
+                <constraint firstItem="gpS-ym-s0J" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="lqC-o7-KfM"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="gpS-ym-s0J" secondAttribute="trailing" id="rNb-gh-TIp"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="lbSeeMore" destination="aZ7-2V-QMZ" id="yTr-7E-yLt"/>
+                <outlet property="lbTitleName" destination="AlG-AJ-uug" id="30I-cR-XAA"/>
+                <outlet property="mainView" destination="gpS-ym-s0J" id="mac-48-BrR"/>
+            </connections>
+            <point key="canvasLocation" x="100" y="41"/>
         </collectionReusableView>
     </objects>
+    <resources>
+        <namedColor name="primary-color">
+            <color red="0.082999996840953827" green="0.10499999672174454" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="tint-color">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 extension Data{
     
     func seralizeData<T:Codable>() -> T?{

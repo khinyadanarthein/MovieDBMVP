@@ -10,3 +10,7 @@ import Foundation
 protocol GenreTileDelegate {
     func onTapTitle(id:Int)
 }
+
+protocol VideoPlayDelegate {
+    func onTapPlayButton(movieId:Int)
+}

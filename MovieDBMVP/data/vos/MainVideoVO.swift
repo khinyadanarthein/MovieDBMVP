@@ -13,22 +13,26 @@ import Foundation
 //   let mainVideoVO = try? newJSONDecoder().decode(MainVideoVO.self, from: jsonData)
 
 import Foundation
+import RealmSwift
 
 // MARK: - Result
-struct MainVideoVO: Codable {
-    let popularity: Double
-    let voteCount: Int
-    let video: Bool
-    let posterPath: String
-    let id: Int
-    let adult: Bool
-    let backdropPath: String
-    let originalLanguage: OriginalLanguage
-    let originalTitle: String
-    let genreIDS: [Int]
-    let title: String
-    let voteAverage: Double
-    let overview, releaseDate: String
+class MainVideoVO: Object, Codable {
+    
+    @objc dynamic var popularity: Double = 0.0
+    @objc dynamic var voteCount: Int = 0
+    @objc dynamic var video: Bool = false
+    @objc dynamic var posterPath: String? = ""
+    @objc dynamic var id: Int = 0
+    @objc dynamic var adult: Bool = false
+    @objc dynamic var backdropPath: String? = ""
+    @objc dynamic var originalLanguage: String? = ""
+    @objc dynamic var originalTitle: String? = ""
+    var genreIDS = List<Int>()
+    @objc dynamic var title: String? = ""
+    @objc dynamic var voteAverage: Double = 0.0
+    @objc dynamic var overview : String? = ""
+    @objc dynamic var releaseDate: String? = ""
+    @objc dynamic var key: String? = ""
 
     enum CodingKeys: String, CodingKey {
         case popularity
@@ -45,11 +49,9 @@ struct MainVideoVO: Codable {
         case overview
         case releaseDate = "release_date"
     }
-}
-
-enum OriginalLanguage: String, Codable {
-    case en = "en"
-    case ko = "ko"
-    case ru = "ru"
-    case zh = "zh"
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
 }

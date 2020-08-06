@@ -8,5 +8,14 @@
 
 import Foundation
 protocol MainPageView{
+    func showLoading()
+    func hideLoading()
+    func showErrorMessage(err:String)
+    func loadingCollectionData()
     
+    func showMovieSlides(data:[MainVideoVO])
+    func loadMovieVideo(data : [MovieVideoDetailVO])
+    
+    func showBestMovieList(data:[BestMovieVO])
+    func showGenreList(data:[GenreVO])
 }

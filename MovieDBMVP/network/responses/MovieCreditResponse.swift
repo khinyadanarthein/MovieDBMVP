@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+// MARK: - MovieCreditResponse
+class MovieCreditResponse: Codable {
+    let id: Int
+    let cast: [MovieCastVO]
+    let crew: [MovieCrewVO]
+
+    init(id: Int, cast: [MovieCastVO], crew: [MovieCrewVO]) {
+        self.id = id
+        self.cast = cast
+        self.crew = crew
+    }
+}

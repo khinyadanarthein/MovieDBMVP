@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+// MARK: - MovieVideoResponse
+class MovieVideoResponse: Codable {
+    let id: Int?
+    let results : [MovieVideoDetailVO]?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case results
+    }
+
+}

@@ -7,3 +7,28 @@
 //
 
 import Foundation
+import RealmSwift
+
+// MARK: - GenreVO
+class GenreResponse: Codable {
+    
+    let genres = [GenreVO]()
+    
+    enum CodingKeys: String, CodingKey {
+        case genres = "genres"
+       
+    }
+
+    
+}
+
+// MARK: - Genre
+class GenreVO: Object, Codable {
+    @objc dynamic var id: Int
+    @objc dynamic var name: String
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
+}

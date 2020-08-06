@@ -35,6 +35,7 @@ open class BaseApiClient {
         return Observable<T>.create { (observer) -> Disposable in
             
             let main_url = BaseApiClient.BASE_URL + url
+            print(main_url)
             let request = self.session.request( main_url , method: method, parameters: params, encoding: encoding ,  headers : headers)
                 .responseJSON{ response in
                     
@@ -44,6 +45,8 @@ open class BaseApiClient {
                     case .success:
                         
                         if  200 ... 299 ~= response.response?.statusCode ?? 500   {
+                            
+                            //let data = try! JSONDecoder().decode(T.self, from: response.data!)
                             
                             let data:T? =  response.data?.seralizeData()
                             if let data = data {
