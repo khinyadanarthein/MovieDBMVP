@@ -19,7 +19,7 @@ enum HomeSection : Int {
 }
 
 class MainViewController: UIViewController {
-    
+
     @IBOutlet weak var mainCollectionView: UICollectionView!
     
     var items : [HomeSection] = [
@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         initIndicator()
         initView()
         initDataObservationMVP()
@@ -59,29 +59,27 @@ class MainViewController: UIViewController {
     }
     
     private func initView() {
+
+      mainCollectionView.register(UINib(nibName: PagingCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: PagingCollectionViewCell.identifier)
         
-//        mainCollectionView.register(UINib(nibName: PagingCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: PagingCollectionViewCell.identifier)
-        
-        mainCollectionView.register(UINib(nibName: SlideVideoCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: PagingCollectionViewCell.identifier)
-        
-        mainCollectionView.register(UINib(nibName: BestPopularCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: BestPopularCollectionViewCell.identifier)
-        
-        mainCollectionView.register(UINib(nibName: ShowTimeCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ShowTimeCollectionViewCell.identifier)
-        
-        mainCollectionView.register(UINib(nibName: GenreGroupCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: GenreGroupCollectionViewCell.identifier)
-        
-        mainCollectionView.register(UINib(nibName: SlideVideoCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: SlideVideoCollectionViewCell.identifier)
-        
-        mainCollectionView.register(UINib(nibName: ShowCaseCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ShowCaseCollectionViewCell.identifier)
-        
-        mainCollectionView.register(UINib(nibName: PersonCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: PersonCollectionViewCell.identifier)
-        
-        mainCollectionView.register(UINib(nibName: TitleCollectionReusableView.identifier, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: TitleCollectionReusableView.identifier)
-        
-        mainCollectionView.dataSource = self
-        mainCollectionView.delegate = self
-        
-        mainCollectionView.setCollectionViewLayout(generateCompositionalLayout(), animated: false)
+      mainCollectionView.register(UINib(nibName: BestPopularCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: BestPopularCollectionViewCell.identifier)
+          
+      mainCollectionView.register(UINib(nibName: ShowTimeCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ShowTimeCollectionViewCell.identifier)
+      
+      mainCollectionView.register(UINib(nibName: GenreGroupCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: GenreGroupCollectionViewCell.identifier)
+      
+      mainCollectionView.register(UINib(nibName: SlideVideoCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: SlideVideoCollectionViewCell.identifier)
+      
+      mainCollectionView.register(UINib(nibName: ShowCaseCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ShowCaseCollectionViewCell.identifier)
+      
+      mainCollectionView.register(UINib(nibName: PersonCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: PersonCollectionViewCell.identifier)
+      
+      mainCollectionView.register(UINib(nibName: TitleCollectionReusableView.identifier, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: TitleCollectionReusableView.identifier)
+      
+      mainCollectionView.dataSource = self
+      mainCollectionView.delegate = self
+      
+      mainCollectionView.setCollectionViewLayout(generateCompositionalLayout(), animated: false)
     }
 }
 
@@ -150,59 +148,43 @@ extension MainViewController {
                 
             case HomeSection.BestPopular:
                 return self.sectionLayoutForBestPopularView()
-                
+
             case HomeSection.ShowTime:
                 return self.sectionLayoutForShowTimeView()
-                
+
             case HomeSection.GenreGroup :
                 return self.sectionLayoutForGenreTitleView()
                 
             case HomeSection.Showcase :
                 return self.sectionLayoutForVideoSlideView()
-                
+
             case HomeSection.Actor :
                 return self.sectionLayoutForActorView()
-                
+            
             }
         }
         
     }
     
     func sectionLayoutForPagingView() -> NSCollectionLayoutSection {
-        //        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width), heightDimension: .absolute(255))
-        //
-        //        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        //
-        //        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width), heightDimension: .absolute(255))
-        //
-        //        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
-        //
-        //        //group.interItemSpacing = NSCollectionLayoutSpacing.fixed(10)
-        //
-        //        let section = NSCollectionLayoutSection(group: group)
-        //        section.orthogonalScrollingBehavior = .paging
-        //        //section.interGroupSpacing = 10
-        //        section.contentInsets = NSDirectionalEdgeInsets(top: 35, leading: 0, bottom: 5, trailing: 0)
-        //
-        //        return section
-        
-        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width), heightDimension: .fractionalHeight(1))
-        
+        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width), heightDimension: .absolute(255))
+
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width), heightDimension: .fractionalHeight(0.35))
-        
+
+        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width), heightDimension: .absolute(255))
+
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
-        
+
+        //group.interItemSpacing = NSCollectionLayoutSpacing.fixed(10)
+
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .paging
         //section.interGroupSpacing = 10
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0)
-        section.visibleItemsInvalidationHandler = { (visibleItems, point, env) -> Void in
-            //            print(visibleItems.last?.indexPath.row)
-            //            self.slideIndex.currentPage = visibleItems.last?.indexPath.row ?? 0
-        }
+        section.contentInsets = NSDirectionalEdgeInsets(top: 35, leading: 0, bottom: 5, trailing: 0)
+
         return section
+        
+       
     }
     
     func sectionLayoutForBestPopularView() -> NSCollectionLayoutSection {
@@ -270,7 +252,7 @@ extension MainViewController {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(self.view.frame.width), heightDimension: .absolute(200))
-        
+
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
         //group.interItemSpacing = NSCollectionLayoutSpacing.fixed(10)
         
@@ -327,7 +309,7 @@ extension MainViewController : UICollectionViewDataSource, UICollectionViewDeleg
             case HomeSection.BestPopular.rawValue:
                 cell.lbTitleName.text = "BEST POPULAR FILMS AND SERIALS"
                 cell.lbSeeMore.isHidden = true
-                
+            
             case HomeSection.Showcase.rawValue:
                 cell.mainView.backgroundColor = UIColor(named: "fill-color")
                 cell.lbTitleName.text = "SHOWCASES"
@@ -345,7 +327,7 @@ extension MainViewController : UICollectionViewDataSource, UICollectionViewDeleg
             
             return cell
         }
-        
+      
         return UICollectionReusableView()
         
     }
@@ -383,27 +365,27 @@ extension MainViewController : UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         switch indexPath.section {
-            
+
         case HomeSection.PagingVideo.rawValue:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SlideVideoCollectionViewCell.identifier, for: indexPath) as? SlideVideoCollectionViewCell else {
-                return UICollectionViewCell()
-            }
-//            cell.slideVideoList = mPresenter.movieSlides
-//            cell.mDelegate = self
-//            if mPresenter.slidemMovieVideo.count > 0 {
-//                cell.updateIndex = mPresenter.updatedSlideIndex
-//                cell.videoDataList = mPresenter.slidemMovieVideo
-//                //cell.cvSlideVideo.reloadItems(at: [IndexPath(row: mPresenter.updatedSlideIndex, section: 0)])
-//                cell.cvSlideVideo.scrollToItem(at: IndexPath(row: mPresenter.updatedSlideIndex, section: 0), at: .centeredHorizontally, animated: false)
-//            }
-            return cell
-            
+          guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PagingCollectionViewCell.identifier, for: indexPath) as? PagingCollectionViewCell else {
+              return UICollectionViewCell()
+          }
+          cell.slideVideoList = mPresenter.movieSlides
+          cell.mDelegate = self
+          if mPresenter.slidemMovieVideo.count > 0 {
+            cell.updateIndex = mPresenter.updatedSlideIndex
+            cell.videoDataList = mPresenter.slidemMovieVideo
+            //cell.cvSlideVideo.reloadItems(at: [IndexPath(row: mPresenter.updatedSlideIndex, section: 0)])
+            cell.cvSlideVideo.scrollToItem(at: IndexPath(row: mPresenter.updatedSlideIndex, section: 0), at: .centeredHorizontally, animated: false)
+          }
+          return cell
+           
         case HomeSection.BestPopular.rawValue:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BestPopularCollectionViewCell.identifier, for: indexPath) as? BestPopularCollectionViewCell else {
-                return UICollectionViewCell()
-            }
-            cell.mData = mPresenter.bestMovieList[indexPath.row]
-            return cell
+          guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BestPopularCollectionViewCell.identifier, for: indexPath) as? BestPopularCollectionViewCell else {
+              return UICollectionViewCell()
+          }
+          cell.mData = mPresenter.bestMovieList[indexPath.row]
+          return cell
             
         case HomeSection.ShowTime.rawValue:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShowTimeCollectionViewCell.identifier, for: indexPath) as? ShowTimeCollectionViewCell else {
@@ -448,7 +430,7 @@ extension MainViewController : UICollectionViewDataSource, UICollectionViewDeleg
             cell.mData = mPresenter.actorList[indexPath.row]
             //print("actor list \(mPresenter.actorList.count)")
             return cell
-            
+
         default:
             break
         }
@@ -458,7 +440,7 @@ extension MainViewController : UICollectionViewDataSource, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.section {
-            
+
         case HomeSection.BestPopular.rawValue:
             self.mPresenter.onTapMovie(movieId: mPresenter.bestMovieList[indexPath.row].id)
             
