@@ -1,0 +1,1373 @@
+{
+    "page": 1,
+    "total_results": 10000,
+    "total_pages": 500,
+    "results": [
+        {
+            "popularity": 84.42,
+            "known_for_department": "Acting",
+            "name": "Alison Jaye Horowitz",
+            "id": 1362223,
+            "profile_path": "/iEWtgDu0OweicGOl1rxybzCaota.jpg",
+            "adult": false,
+            "known_for": [
+                {
+                    "original_name": "Shameless",
+                    "genre_ids": [
+                        35,
+                        18
+                    ],
+                    "media_type": "tv",
+                    "name": "Shameless",
+                    "origin_country": [
+                        "US"
+                    ],
+                    "vote_count": 1075,
+                    "first_air_date": "2011-01-09",
+                    "backdrop_path": "/1ccgQ6IJyEc8UHPtGeFFeRqMVnc.jpg",
+                    "original_language": "en",
+                    "id": 34307,
+                    "vote_average": 7.9,
+                    "overview": "Chicagoan Frank Gallagher is the proud single dad of six smart, industrious, independent kids, who without him would be... perhaps better off. When Frank's not at the bar spending what little money they have, he's passed out on the floor. But the kids have found ways to grow up in spite of him. They may not be like any family you know, but they make no apologies for being exactly who they are.",
+                    "poster_path": "/m2gf7SYOq9z30Q1dJFMF51DfrmF.jpg"
+                },
+                {
+                    "original_name": "Unbelievable",
+                    "genre_ids": [
+                        80,
+                        18
+                    ],
+                    "media_type": "tv",
+                    "name": "Unbelievable",
+                    "origin_country": [
+                        "US"
+                    ],
+                    "vote_count": 131,
+                    "first_air_date": "2019-09-13",
+                    "backdrop_path": "/yG5oWkFH8xle6xkD2JB7HWfuSGx.jpg",
+                    "original_language": "en",
+                    "id": 91275,
+                    "vote_average": 8.2,
+                    "overview": "A teenager is charged with lying about her rape allegation, but two determined investigative female detectives discover a far more sinister truth.",
+                    "poster_path": "/jHOrNJNM03Lsjdw7nsw7TlqBOhd.jpg"
+                },
+                {
+                    "vote_count": 3,
+                    "id": 650366,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 4.3,
+                    "title": "Total Freak",
+                    "release_date": "2014-05-23",
+                    "original_language": "en",
+                    "original_title": "Total Freak",
+                    "genre_ids": [
+                        27
+                    ],
+                    "backdrop_path": null,
+                    "adult": false,
+                    "overview": "In this summer camp horror-comedy, a young teen pursues a mean girl and discovers a secret about the lake.",
+                    "poster_path": "/lYoD6gBmhtoqGNDxbhyFm9fW4BG.jpg"
+                }
+            ],
+            "gender": 1
+        },
+        {
+            "popularity": 55.166,
+            "known_for_department": "Acting",
+            "name": "Silje Torp",
+            "id": 123456,
+            "profile_path": "/fAcrRVZqLMVDVcgfvf7xmY7QRtY.jpg",
+            "adult": false,
+            "known_for": [
+                {
+                    "original_name": "Vikingane",
+                    "genre_ids": [
+                        35,
+                        18
+                    ],
+                    "media_type": "tv",
+                    "name": "Norsemen",
+                    "origin_country": [
+                        "NO"
+                    ],
+                    "vote_count": 53,
+                    "first_air_date": "2016-10-14",
+                    "backdrop_path": "/3zCcTOfMfDxFujLxBTFFbD60sDV.jpg",
+                    "original_language": "no",
+                    "id": 68126,
+                    "vote_average": 7.1,
+                    "overview": "Norsemen is an epic and humorous drama series set in the Viking Age. The residents of an 8th-century Viking village experience political rivalry, social change and innovations that upend their culture and way of life.",
+                    "poster_path": "/xCt02AL7i395Nwfq8jbq1C54mvX.jpg"
+                },
+                {
+                    "poster_path": "/lFIYeGXqGoaFaAVAVc59FsXhq9O.jpg",
+                    "vote_count": 29,
+                    "video": false,
+                    "media_type": "movie",
+                    "id": 14812,
+                    "adult": false,
+                    "backdrop_path": null,
+                    "original_language": "no",
+                    "original_title": "Hawaii, Oslo",
+                    "genre_ids": [
+                        18
+                    ],
+                    "title": "Hawaii, Oslo",
+                    "vote_average": 6.4,
+                    "overview": "Hawaii, Oslo is the story of a handful of people who cross each other's path without necessarily knowing each other, during the hottest day of the year, in Oslo. We follow Frode and Milla. They are having their first child, who they are told will not live long. We follow Bobbie-Pop, a faded singer who tries to commit suicide. We follow Leon, an institutionalized kleptomaniac who is loking for Åsa, to whom he has a ten year old deal to get married. We meet Leon's brother, Trygve, who fetches Leon at the institution to celebrate his birthday, but who himself has plans to use his leave from prison to run away. And most of all we meet the angel Vidar, Leon's best buddy at the institution, who sees things no one else can see, and who may be able to save everyone - except himself?",
+                    "release_date": "2004-09-24"
+                },
+                {
+                    "original_name": "Dag",
+                    "id": 37016,
+                    "media_type": "tv",
+                    "name": "Dag",
+                    "vote_count": 15,
+                    "vote_average": 8.1,
+                    "first_air_date": "2010-09-30",
+                    "poster_path": "/7LYvtxOve36tFEhXZbi82QYB1jl.jpg",
+                    "genre_ids": [
+                        35
+                    ],
+                    "original_language": "no",
+                    "backdrop_path": "/cOgNSaguVudRwXi7z0WY9vVDRVe.jpg",
+                    "overview": "Meet Dag, a couple's therapist who holds a 90% divorce rate. His philosophy in life is that people should live alone and he's happy to share that with his patients. Dag leads a quiet life and the only thing he loves more than his solitude is prescription drugs. However, Dag's peaceful existence is about to change radically when Eva enters his life.",
+                    "origin_country": [
+                        "NO"
+                    ]
+                }
+            ],
+            "gender": 1
+        },
+        {
+            "popularity": 32.275,
+            "known_for_department": "Acting",
+            "gender": 1,
+            "id": 4494,
+            "profile_path": "/p3wxUblbPwRVzTp7jW1lXISKIob.jpg",
+            "adult": false,
+            "known_for": [
+                {
+                    "release_date": "2003-05-23",
+                    "id": 310,
+                    "vote_count": 7752,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 6.7,
+                    "title": "Bruce Almighty",
+                    "genre_ids": [
+                        35,
+                        14
+                    ],
+                    "original_title": "Bruce Almighty",
+                    "original_language": "en",
+                    "adult": false,
+                    "backdrop_path": "/dGd8d46OFotMbWlb2jHtO18H5XX.jpg",
+                    "overview": "Bruce Nolan toils as a 'human interest' television reporter in Buffalo, N.Y., but despite his high ratings and the love of his beautiful girlfriend, Bruce remains unfulfilled. At the end of the worst day in his life, he angrily ridicules God—and the Almighty responds, endowing Bruce with all of His divine powers.",
+                    "poster_path": "/3XJKBKh9Km89EoUEitVTSnrlAkZ.jpg"
+                },
+                {
+                    "release_date": "2005-06-28",
+                    "id": 74,
+                    "vote_count": 5548,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 6.4,
+                    "title": "War of the Worlds",
+                    "genre_ids": [
+                        12,
+                        878,
+                        53
+                    ],
+                    "original_title": "War of the Worlds",
+                    "original_language": "en",
+                    "adult": false,
+                    "backdrop_path": "/nH6hPhJq3EEv9CnBZgXU3IQnpJo.jpg",
+                    "overview": "Ray Ferrier is a divorced dockworker and less-than-perfect father. Soon after his ex-wife and her new husband drop off his teenage son and young daughter for a rare weekend visit, a strange and powerful lightning storm touches down.",
+                    "poster_path": "/6Biy7R9LfumYshur3YKhpj56MpB.jpg"
+                },
+                {
+                    "poster_path": "/a3XOGrrAjl1wwiumtACWBufg6AL.jpg",
+                    "id": 9820,
+                    "vote_count": 2448,
+                    "video": false,
+                    "media_type": "movie",
+                    "adult": false,
+                    "backdrop_path": "/mrYJ0ijgaxjHKAs0ybNYxyfP8l5.jpg",
+                    "genre_ids": [
+                        35,
+                        10751
+                    ],
+                    "original_title": "The Parent Trap",
+                    "original_language": "en",
+                    "title": "The Parent Trap",
+                    "vote_average": 7.1,
+                    "overview": "Hallie Parker and Annie James are identical twins separated at a young age because of their parents' divorce. unknowingly to their parents, the girls are sent to the same summer camp where they meet, discover the truth about themselves, and then plot with each other to switch places. Hallie meets her mother, and Annie meets her father for the first time in years.",
+                    "release_date": "1998-07-28"
+                }
+            ],
+            "name": "Lisa Ann Walter"
+        },
+        {
+            "popularity": 37.843,
+            "known_for_department": "Acting",
+            "name": "Tom Hanks",
+            "id": 31,
+            "profile_path": "/mKr8PN8sn80LzVaZMg8L52kmakm.jpg",
+            "adult": false,
+            "known_for": [
+                {
+                    "poster_path": "/clolk7rB5lAjs41SD0Vt6IXYLMm.jpg",
+                    "vote_count": 18577,
+                    "video": false,
+                    "media_type": "movie",
+                    "id": 13,
+                    "adult": false,
+                    "backdrop_path": "/7c9UVPPiTPltouxRVY6N9uugaVA.jpg",
+                    "original_language": "en",
+                    "original_title": "Forrest Gump",
+                    "genre_ids": [
+                        35,
+                        18,
+                        10749
+                    ],
+                    "title": "Forrest Gump",
+                    "vote_average": 8.5,
+                    "overview": "A man with a low IQ has accomplished great things in his life and been present during significant historic events—in each case, far exceeding what anyone imagined he could do. But despite all he has achieved, his one true love eludes him.",
+                    "release_date": "1994-07-06"
+                },
+                {
+                    "poster_path": "/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg",
+                    "vote_count": 12743,
+                    "video": false,
+                    "media_type": "movie",
+                    "id": 862,
+                    "adult": false,
+                    "backdrop_path": "/lxD5ak7BOoinRNehOCA85CQ8ubr.jpg",
+                    "original_language": "en",
+                    "original_title": "Toy Story",
+                    "genre_ids": [
+                        16,
+                        35,
+                        10751
+                    ],
+                    "title": "Toy Story",
+                    "vote_average": 7.9,
+                    "overview": "Led by Woody, Andy's toys live happily in his room until Andy's birthday brings Buzz Lightyear onto the scene. Afraid of losing his place in Andy's heart, Woody plots against Buzz. But when circumstances separate Buzz and Woody from their owner, the duo eventually learns to put aside their differences.",
+                    "release_date": "1995-10-30"
+                },
+                {
+                    "vote_count": 10643,
+                    "id": 497,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 8.5,
+                    "title": "The Green Mile",
+                    "release_date": "1999-12-10",
+                    "original_language": "en",
+                    "original_title": "The Green Mile",
+                    "genre_ids": [
+                        14,
+                        18,
+                        80
+                    ],
+                    "backdrop_path": "/xMIyotorUv2Yz7zpQz2QYc8wkWB.jpg",
+                    "adult": false,
+                    "overview": "A supernatural tale set on death row in a Southern prison, where gentle giant John Coffey possesses the mysterious power to heal people's ailments. When the cell block's head guard, Paul Edgecomb, recognizes Coffey's miraculous gift, he tries desperately to help stave off the condemned man's execution.",
+                    "poster_path": "/velWPhVMQeQKcxggNEU8YmIo52R.jpg"
+                }
+            ],
+            "gender": 2
+        },
+        {
+            "popularity": 29.431,
+            "known_for_department": "Acting",
+            "gender": 2,
+            "id": 85,
+            "profile_path": "/532tIC5wzmmR1jO7oA83rTiLvBx.jpg",
+            "adult": false,
+            "known_for": [
+                {
+                    "release_date": "2003-07-09",
+                    "id": 22,
+                    "vote_count": 14812,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 7.7,
+                    "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+                    "genre_ids": [
+                        28,
+                        12,
+                        14
+                    ],
+                    "original_title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+                    "original_language": "en",
+                    "adult": false,
+                    "backdrop_path": "/7yxjg8pvp3JuqguUaJPYTma6Z7t.jpg",
+                    "overview": "Jack Sparrow, a freewheeling 18th-century pirate, quarrels with a rival pirate bent on pillaging Port Royal. When the governor's daughter is kidnapped, Sparrow decides to help the girl's love save her.",
+                    "poster_path": "/z8onk7LV9Mmw6zKz4hT6pzzvmvl.jpg"
+                },
+                {
+                    "release_date": "2016-11-16",
+                    "id": 259316,
+                    "vote_count": 14305,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 7.4,
+                    "title": "Fantastic Beasts and Where to Find Them",
+                    "genre_ids": [
+                        12,
+                        14,
+                        10751
+                    ],
+                    "original_title": "Fantastic Beasts and Where to Find Them",
+                    "original_language": "en",
+                    "adult": false,
+                    "backdrop_path": "/7GrpqAs0oDcFcwFwyygnUI7BrZA.jpg",
+                    "overview": "In 1926, Newt Scamander arrives at the Magical Congress of the United States of America with a magically expanded briefcase, which houses a number of dangerous creatures and their habitats. When the creatures escape from the briefcase, it sends the American wizarding authorities after Newt, and threatens to strain even further the state of magical and non-magical relations.",
+                    "poster_path": "/h6NYfVUyM6CDURtZSnBpz647Ldd.jpg"
+                },
+                {
+                    "release_date": "2006-06-20",
+                    "id": 58,
+                    "vote_count": 11269,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 7.3,
+                    "title": "Pirates of the Caribbean: Dead Man's Chest",
+                    "genre_ids": [
+                        28,
+                        12,
+                        14
+                    ],
+                    "original_title": "Pirates of the Caribbean: Dead Man's Chest",
+                    "original_language": "en",
+                    "adult": false,
+                    "backdrop_path": "/vv5a8u6e40kyH0Hp6HuamAgzRai.jpg",
+                    "overview": "Captain Jack Sparrow works his way out of a blood debt with the ghostly Davey Jones to avoid eternal damnation.",
+                    "poster_path": "/AdRQGfT05z6L9gIpUpkh4McMmpm.jpg"
+                }
+            ],
+            "name": "Johnny Depp"
+        },
+        {
+            "popularity": 28.171,
+            "known_for_department": "Acting",
+            "gender": 2,
+            "id": 1780950,
+            "profile_path": "/chbeyxCZ0ReI4NIE1keApI75rlj.jpg",
+            "adult": false,
+            "known_for": [
+                {
+                    "original_name": "Timeless",
+                    "id": 66786,
+                    "origin_country": [
+                        "US"
+                    ],
+                    "name": "Timeless",
+                    "backdrop_path": "/fWY2Ighm2QZs9sLZZ2xCLVnDeFt.jpg",
+                    "original_language": "en",
+                    "first_air_date": "2016-10-03",
+                    "genre_ids": [
+                        10759,
+                        18,
+                        10765
+                    ],
+                    "vote_count": 375,
+                    "media_type": "tv",
+                    "vote_average": 7.3,
+                    "overview": "A mysterious criminal steals a secret state-of-the-art time machine, intent on destroying America as we know it by changing the past. Our only hope is an unexpected team: a scientist, a soldier and a history professor, who must use the machine's prototype to travel back in time to critical events. While they must make every effort not to affect the past themselves, they must also stay one step ahead of this dangerous fugitive. But can this handpicked team uncover the mystery behind it all and end his destruction before it's too late?",
+                    "poster_path": "/wFaS9kROwztTWNxIKBbOLwIgApV.jpg"
+                },
+                {
+                    "release_date": "2018-09-27",
+                    "id": 448095,
+                    "vote_count": 359,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 6.7,
+                    "title": "I Still See You",
+                    "genre_ids": [
+                        14,
+                        53
+                    ],
+                    "original_title": "I Still See You",
+                    "original_language": "en",
+                    "adult": false,
+                    "backdrop_path": "/7rqpB7coXaNvTVMWb5vL8qU0pBp.jpg",
+                    "overview": "A spellbinding and romantic supernatural thriller. Ten years after an apocalyptic event left the world haunted by ghosts, Roni receives a threatening message from beyond the grave. Joining forces with a mysterious classmate, Kirk, Roni descends into a shadow world that blurs the bounds of the living and the dead-and begins a desperate race against time to stop a cunning killer.",
+                    "poster_path": "/9fqzZs922V8OmwgO11Eqclof2mQ.jpg"
+                },
+                {
+                    "original_name": "The Order",
+                    "vote_count": 405,
+                    "poster_path": "/yMPjmuSd5Fac8YMNOwofGALQWjR.jpg",
+                    "media_type": "tv",
+                    "name": "The Order",
+                    "vote_average": 7.9,
+                    "id": 82104,
+                    "first_air_date": "2019-03-07",
+                    "original_language": "en",
+                    "genre_ids": [
+                        18,
+                        9648,
+                        10765
+                    ],
+                    "backdrop_path": "/5ptaKaAqhTWZnlpQTrE1dByWyh1.jpg",
+                    "overview": "Out to avenge his mother's death, a college student pledges a secret order and lands in a war between werewolves and practitioners of dark magic.",
+                    "origin_country": [
+                        "US"
+                    ]
+                }
+            ],
+            "name": "Thomas Elms"
+        },
+        {
+            "popularity": 32.561,
+            "known_for_department": "Acting",
+            "gender": 2,
+            "id": 976,
+            "profile_path": "/lldeQ91GwIVff43JBrpdbAAeYWj.jpg",
+            "adult": false,
+            "known_for": [
+                {
+                    "release_date": "2013-05-21",
+                    "id": 82992,
+                    "vote_count": 8031,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 6.8,
+                    "title": "Fast & Furious 6",
+                    "genre_ids": [
+                        28,
+                        80,
+                        53
+                    ],
+                    "original_title": "Fast & Furious 6",
+                    "original_language": "en",
+                    "adult": false,
+                    "backdrop_path": "/rF8HkxQ1RlrcPg41gmL5AM56Qxd.jpg",
+                    "overview": "Hobbs has Dominic and Brian reassemble their crew to take down a team of mercenaries: Dominic unexpectedly gets convoluted also facing his presumed deceased girlfriend, Letty.",
+                    "poster_path": "/n31VRDodbaZxkrZmmzyYSFNVpW5.jpg"
+                },
+                {
+                    "poster_path": "/d9jZ2bKZw3ptTuxAyVHA6olPAVs.jpg",
+                    "id": 168259,
+                    "vote_count": 7707,
+                    "video": false,
+                    "media_type": "movie",
+                    "adult": false,
+                    "backdrop_path": "/ehzI1mVcnHqB58NqPyQwpMqcVoz.jpg",
+                    "genre_ids": [
+                        28,
+                        53
+                    ],
+                    "original_title": "Furious 7",
+                    "original_language": "en",
+                    "title": "Furious 7",
+                    "vote_average": 7.3,
+                    "overview": "Deckard Shaw seeks revenge against Dominic Toretto and his family for his comatose brother.",
+                    "release_date": "2015-04-01"
+                },
+                {
+                    "release_date": "2017-04-12",
+                    "id": 337339,
+                    "vote_count": 7512,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 6.9,
+                    "title": "The Fate of the Furious",
+                    "genre_ids": [
+                        28,
+                        80,
+                        53
+                    ],
+                    "original_title": "The Fate of the Furious",
+                    "original_language": "en",
+                    "adult": false,
+                    "backdrop_path": "/pEL81RWzS3LaybTCf7vp2KvVLhw.jpg",
+                    "overview": "When a mysterious woman seduces Dom into the world of crime and a betrayal of those closest to him, the crew face trials that will test them as never before.",
+                    "poster_path": "/dImWM7GJqryWJO9LHa3XQ8DD5NH.jpg"
+                }
+            ],
+            "name": "Jason Statham"
+        },
+        {
+            "popularity": 23.603,
+            "known_for_department": "Acting",
+            "gender": 1,
+            "id": 71070,
+            "profile_path": "/kkWFJ2Ygu6ZcQgrldOnjhHg7WOk.jpg",
+            "adult": false,
+            "known_for": [
+                {
+                    "release_date": "2011-10-27",
+                    "id": 49530,
+                    "vote_count": 7749,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 6.9,
+                    "title": "In Time",
+                    "genre_ids": [
+                        28,
+                        878,
+                        53
+                    ],
+                    "original_title": "In Time",
+                    "original_language": "en",
+                    "adult": false,
+                    "backdrop_path": "/kx2YVkcsnTnmF9XGTAj2NqEcHFG.jpg",
+                    "overview": "In the not-too-distant future the aging gene has been switched off. To avoid overpopulation, time has become the currency and the way people pay for luxuries and necessities. The rich can live forever, while the rest try to negotiate for their immortality. A poor young man who comes into a fortune of time, though too late to help his mother from dying. He ends up on the run from a corrupt police force known as 'time keepers'.",
+                    "poster_path": "/3Mwj2sIONQckOZP3YwsUXF7U5I4.jpg"
+                },
+                {
+                    "poster_path": "/fXm3YKXAEjx7d2tIWDg9TfRZtsU.jpg",
+                    "id": 10625,
+                    "vote_count": 5957,
+                    "video": false,
+                    "media_type": "movie",
+                    "adult": false,
+                    "backdrop_path": "/3PiKtDl1s0tGHmqRjnWZbBVgEEr.jpg",
+                    "genre_ids": [
+                        35
+                    ],
+                    "original_title": "Mean Girls",
+                    "original_language": "en",
+                    "title": "Mean Girls",
+                    "vote_average": 7.1,
+                    "overview": "Cady Heron is a hit with The Plastics, the A-list girl clique at her new school, until she makes the mistake of falling for Aaron Samuels, the ex-boyfriend of alpha Plastic Regina George.",
+                    "release_date": "2004-04-30"
+                },
+                {
+                    "release_date": "2015-06-25",
+                    "id": 214756,
+                    "vote_count": 5064,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 6.2,
+                    "title": "Ted 2",
+                    "genre_ids": [
+                        35
+                    ],
+                    "original_title": "Ted 2",
+                    "original_language": "en",
+                    "adult": false,
+                    "backdrop_path": "/yloR8F4DUYJJiCoouecp1qfAUFK.jpg",
+                    "overview": "Newlywed couple Ted and Tami-Lynn want to have a baby, but in order to qualify to be a parent, Ted will have to prove he's a person in a court of law.",
+                    "poster_path": "/38C91I7Xft0gyY7BITm8i4yvuRb.jpg"
+                }
+            ],
+            "name": "Amanda Seyfried"
+        },
+        {
+            "popularity": 20.584,
+            "known_for_department": "Acting",
+            "gender": 1,
+            "id": 17286,
+            "profile_path": "/xR2IBnBlUdyBe5hecaVdtRuQqUE.jpg",
+            "adult": false,
+            "known_for": [
+                {
+                    "poster_path": "/im6ZMuKTdLxMsDpySHjV0k17lnJ.jpg",
+                    "id": 1271,
+                    "vote_count": 9734,
+                    "video": false,
+                    "media_type": "movie",
+                    "adult": false,
+                    "backdrop_path": "/lgBZlJ1LHQel5nneNQMoesmvc7l.jpg",
+                    "genre_ids": [
+                        28,
+                        12,
+                        10752
+                    ],
+                    "original_title": "300",
+                    "original_language": "en",
+                    "title": "300",
+                    "vote_average": 7.1,
+                    "overview": "Based on Frank Miller's graphic novel, \"300\" is very loosely based the 480 B.C. Battle of Thermopylae, where the King of Sparta led his army against the advancing Persians; the battle is said to have inspired all of Greece to band together against the Persians, and helped usher in the world's first democracy.",
+                    "release_date": "2007-03-07"
+                },
+                {
+                    "original_name": "Game of Thrones",
+                    "vote_count": 9590,
+                    "poster_path": "/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
+                    "media_type": "tv",
+                    "name": "Game of Thrones",
+                    "vote_average": 8.3,
+                    "id": 1399,
+                    "first_air_date": "2011-04-17",
+                    "original_language": "en",
+                    "genre_ids": [
+                        18,
+                        10765
+                    ],
+                    "backdrop_path": "/suopoADq0k8YZr4dQXcU6pToj6s.jpg",
+                    "overview": "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
+                    "origin_country": [
+                        "US"
+                    ]
+                },
+                {
+                    "release_date": "2013-05-31",
+                    "id": 158015,
+                    "vote_count": 5926,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 6.2,
+                    "title": "The Purge",
+                    "genre_ids": [
+                        27,
+                        878,
+                        53
+                    ],
+                    "original_title": "The Purge",
+                    "original_language": "en",
+                    "adult": false,
+                    "backdrop_path": "/tZ0A51DX5UKJbpa15RX0FyduVQT.jpg",
+                    "overview": "Given the country's overcrowded prisons, the U.S. government begins to allow 12-hour periods of time in which all illegal activity is legal. During one of these free-for-alls, a family must protect themselves from a home invasion.",
+                    "poster_path": "/29Qf0zH2pF1YKBxWJIcSvS6ubJq.jpg"
+                }
+            ],
+            "name": "Lena Headey"
+        },
+        {
+            "popularity": 20.52,
+            "known_for_department": "Acting",
+            "gender": 1,
+            "id": 224513,
+            "profile_path": "/14uxt0jH28J9zn4vNQNTae3Bmr7.jpg",
+            "adult": false,
+            "known_for": [
+                {
+                    "release_date": "2017-10-04",
+                    "id": 335984,
+                    "vote_count": 8549,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 7.4,
+                    "title": "Blade Runner 2049",
+                    "genre_ids": [
+                        18,
+                        878
+                    ],
+                    "original_title": "Blade Runner 2049",
+                    "original_language": "en",
+                    "adult": false,
+                    "backdrop_path": "/sAtoMqDVhNDQBc3QJL3RF6hlhGq.jpg",
+                    "overview": "Thirty years after the events of the first film, a new blade runner, LAPD Officer K, unearths a long-buried secret that has the potential to plunge what's left of society into chaos. K's discovery leads him on a quest to find Rick Deckard, a former LAPD blade runner who has been missing for 30 years.",
+                    "poster_path": "/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg"
+                },
+                {
+                    "release_date": "2019-11-27",
+                    "id": 546554,
+                    "vote_count": 5100,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 7.8,
+                    "title": "Knives Out",
+                    "genre_ids": [
+                        35,
+                        80,
+                        18,
+                        9648,
+                        53
+                    ],
+                    "original_title": "Knives Out",
+                    "original_language": "en",
+                    "adult": false,
+                    "backdrop_path": "/AbRYlvwAKHs0YuyNO6NX9ofq4l6.jpg",
+                    "overview": "When renowned crime novelist Harlan Thrombey is found dead at his estate just after his 85th birthday, the inquisitive and debonair Detective Benoit Blanc is mysteriously enlisted to investigate. From Harlan's dysfunctional family to his devoted staff, Blanc sifts through a web of red herrings and self-serving lies to uncover the truth behind Harlan's untimely death.",
+                    "poster_path": "/pThyQovXQrw2m0s9x82twj48Jq4.jpg"
+                },
+                {
+                    "release_date": "2016-08-17",
+                    "id": 308266,
+                    "vote_count": 2989,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 6.8,
+                    "title": "War Dogs",
+                    "genre_ids": [
+                        35,
+                        80,
+                        18
+                    ],
+                    "original_title": "War Dogs",
+                    "original_language": "en",
+                    "adult": false,
+                    "backdrop_path": "/oNoprEND25zXR6Fns8cIZUkuoMc.jpg",
+                    "overview": "Based on the true story of two young men, David Packouz and Efraim Diveroli, who won a $300 million contract from the Pentagon to arm America's allies in Afghanistan.",
+                    "poster_path": "/mDcPRjZC1bb6LavFU3gwsWdVfCM.jpg"
+                }
+            ],
+            "name": "Ana de Armas"
+        },
+        {
+            "popularity": 31.559,
+            "known_for_department": "Acting",
+            "name": "Sean Bean",
+            "id": 48,
+            "profile_path": "/kTjiABk3TJ3yI0Cto5RsvyT6V3o.jpg",
+            "adult": false,
+            "known_for": [
+                {
+                    "poster_path": "/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
+                    "vote_count": 17514,
+                    "video": false,
+                    "media_type": "movie",
+                    "id": 120,
+                    "adult": false,
+                    "backdrop_path": "/vRQnzOn4HjIMX4LBq9nHhFXbsSu.jpg",
+                    "original_language": "en",
+                    "original_title": "The Lord of the Rings: The Fellowship of the Ring",
+                    "genre_ids": [
+                        28,
+                        12,
+                        14
+                    ],
+                    "title": "The Lord of the Rings: The Fellowship of the Ring",
+                    "vote_average": 8.3,
+                    "overview": "Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must leave his home in order to keep it from falling into the hands of its evil creator. Along the way, a fellowship is formed to protect the ringbearer and make sure that the ring arrives at its final destination: Mt. Doom, the only place where it can be destroyed.",
+                    "release_date": "2001-12-18"
+                },
+                {
+                    "poster_path": "/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
+                    "vote_count": 15997,
+                    "video": false,
+                    "media_type": "movie",
+                    "id": 122,
+                    "adult": false,
+                    "backdrop_path": "/9DeGfFIqjph5CBFVQrD6wv9S7rR.jpg",
+                    "original_language": "en",
+                    "original_title": "The Lord of the Rings: The Return of the King",
+                    "genre_ids": [
+                        28,
+                        12,
+                        14
+                    ],
+                    "title": "The Lord of the Rings: The Return of the King",
+                    "vote_average": 8.5,
+                    "overview": "Aragorn is revealed as the heir to the ancient kings as he, Gandalf and the other members of the broken fellowship struggle to save Gondor from Sauron's forces. Meanwhile, Frodo and Sam take the ring closer to the heart of Mordor, the dark lord's realm.",
+                    "release_date": "2003-12-01"
+                },
+                {
+                    "poster_path": "/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg",
+                    "vote_count": 15097,
+                    "video": false,
+                    "media_type": "movie",
+                    "id": 121,
+                    "adult": false,
+                    "backdrop_path": "/7tNTPZMb13W0AhkcuoL6myRrNRr.jpg",
+                    "original_language": "en",
+                    "original_title": "The Lord of the Rings: The Two Towers",
+                    "genre_ids": [
+                        28,
+                        12,
+                        14
+                    ],
+                    "title": "The Lord of the Rings: The Two Towers",
+                    "vote_average": 8.3,
+                    "overview": "Frodo and Sam are trekking to Mordor to destroy the One Ring of Power while Gimli, Legolas and Aragorn search for the orc-captured Merry and Pippin. All along, nefarious wizard Saruman awaits the Fellowship members at the Orthanc Tower in Isengard.",
+                    "release_date": "2002-12-18"
+                }
+            ],
+            "gender": 2
+        },
+        {
+            "popularity": 24.891,
+            "known_for_department": "Acting",
+            "name": "Henry Cavill",
+            "id": 73968,
+            "profile_path": "/hErUwonrQgY5Y7RfxOfv8Fq11MB.jpg",
+            "adult": false,
+            "known_for": [
+                {
+                    "poster_path": "/5UsK3grJvtQrtzEgqNlDljJW96w.jpg",
+                    "vote_count": 13700,
+                    "video": false,
+                    "media_type": "movie",
+                    "id": 209112,
+                    "adult": false,
+                    "backdrop_path": "/doiUtOHzcxXFl0GVQ2n8Ay6Pirx.jpg",
+                    "original_language": "en",
+                    "original_title": "Batman v Superman: Dawn of Justice",
+                    "genre_ids": [
+                        28,
+                        12,
+                        14
+                    ],
+                    "title": "Batman v Superman: Dawn of Justice",
+                    "vote_average": 5.9,
+                    "overview": "Fearing the actions of a god-like Super Hero left unchecked, Gotham City’s own formidable, forceful vigilante takes on Metropolis’s most revered, modern-day savior, while the world wrestles with what sort of hero it really needs. And with Batman and Superman at war with one another, a new threat quickly arises, putting mankind in greater danger than it’s ever known before.",
+                    "release_date": "2016-03-23"
+                },
+                {
+                    "poster_path": "/7rIPjn5TUK04O25ZkMyHrGNPgLx.jpg",
+                    "vote_count": 11239,
+                    "video": false,
+                    "media_type": "movie",
+                    "id": 49521,
+                    "adult": false,
+                    "backdrop_path": "/69EFgWWPFWbRNHmQgYdSnyJ94Ge.jpg",
+                    "original_language": "en",
+                    "original_title": "Man of Steel",
+                    "genre_ids": [
+                        28,
+                        12,
+                        14,
+                        878
+                    ],
+                    "title": "Man of Steel",
+                    "vote_average": 6.5,
+                    "overview": "A young boy learns that he has extraordinary powers and is not of this earth. As a young man, he journeys to discover where he came from and what he was sent here to do. But the hero in him must emerge if he is to save the world from annihilation and become the symbol of hope for all mankind.",
+                    "release_date": "2013-06-12"
+                },
+                {
+                    "poster_path": "/eifGNCSDuxJeS1loAXil5bIGgvC.jpg",
+                    "vote_count": 9442,
+                    "video": false,
+                    "media_type": "movie",
+                    "id": 141052,
+                    "adult": false,
+                    "backdrop_path": "/jorgjEk6a0bed6jdR5wu4S6ZvRm.jpg",
+                    "original_language": "en",
+                    "original_title": "Justice League",
+                    "genre_ids": [
+                        28,
+                        12,
+                        14,
+                        878
+                    ],
+                    "title": "Justice League",
+                    "vote_average": 6.2,
+                    "overview": "Fuelled by his restored faith in humanity and inspired by Superman's selfless act, Bruce Wayne and Diana Prince assemble a team of metahumans consisting of Barry Allen, Arthur Curry and Victor Stone to face the catastrophic threat of Steppenwolf and the Parademons who are on the hunt for three Mother Boxes on Earth.",
+                    "release_date": "2017-11-15"
+                }
+            ],
+            "gender": 2
+        },
+        {
+            "popularity": 27.944,
+            "known_for_department": "Acting",
+            "name": "Afra Saraçoğlu",
+            "id": 1955840,
+            "profile_path": "/a7bOCe7NAR9uQwQf0xpghMZlg4C.jpg",
+            "adult": false,
+            "known_for": [
+                {
+                    "vote_count": 13,
+                    "id": 437486,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 4.6,
+                    "title": "Kötü Çocuk",
+                    "release_date": "2017-01-20",
+                    "original_language": "tr",
+                    "original_title": "Kötü Çocuk",
+                    "genre_ids": [
+                        10749,
+                        18
+                    ],
+                    "backdrop_path": "/OczhOHq0lLGawvZypiWUtvgGFC.jpg",
+                    "adult": false,
+                    "overview": "",
+                    "poster_path": "/4o9JEg7gUbKmJE3L6VP1xvSjYHY.jpg"
+                },
+                {
+                    "original_name": "Fazilet Hanım ve Kızları",
+                    "id": 76560,
+                    "media_type": "tv",
+                    "name": "Mrs. Fazilet and Her Daughters",
+                    "vote_count": 4,
+                    "vote_average": 9.3,
+                    "first_air_date": "2017-03-25",
+                    "poster_path": "/hJe1m8eKqb14xE0ers6dAZm1QrS.jpg",
+                    "genre_ids": [
+                        18
+                    ],
+                    "original_language": "tr",
+                    "backdrop_path": "/A4V6jJNHNNvMdICvs3CaH70zIvh.jpg",
+                    "overview": "The story of Fazilet, mother of Hazan and Ece, eager to make money using the modeling skills of her younger daughter, Ece. While Hazan pursues a career as a coach in sports, far from her mother's wishes and falls in love with a rich spoiled man.",
+                    "origin_country": [
+                        "TR"
+                    ]
+                },
+                {
+                    "vote_count": 3,
+                    "id": 613976,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 6.5,
+                    "title": "Ask Bu Mu?",
+                    "release_date": "2018-12-14",
+                    "original_language": "tr",
+                    "original_title": "Aşk Bu Mu?",
+                    "genre_ids": [
+                        35,
+                        10749,
+                        18
+                    ],
+                    "backdrop_path": "/l2ajVkBvEvU2IHxQpqh5mLSETzm.jpg",
+                    "adult": false,
+                    "overview": "Umut has been a thief since he was a kid. He constantly seeks the opportunity of his life and his family. He can't find either. Gülüm is a young girl who has no problems in her life, who has completed her schooling on time and is only a step away from her dreams. But before she takes that step towards her dreams, she hangs and falls. It is understood that Gülüm has liver failure. She'll die if she doesn't have a liver transplant. The fate of Umut and Gülüm merge at this point. Umut found the opportunity he had waited for the rest of his life. But this opportunity drags Umut into very difficult situations, and finds itself in a position that risks the lives of all loved ones. For Umut to come out of this vortex, he has to make very serious decisions. And love is worth everything? Is this love?",
+                    "poster_path": "/2C4KmYpWOagIXHvHGbR8RwFxAuf.jpg"
+                }
+            ],
+            "gender": 0
+        },
+        {
+            "popularity": 19.216,
+            "known_for_department": "Acting",
+            "gender": 1,
+            "id": 1283843,
+            "profile_path": "/9ExASXw097MyNuSy6N23fpkqpXq.jpg",
+            "adult": false,
+            "known_for": [
+                {
+                    "original_name": "La casa de papel",
+                    "vote_count": 8279,
+                    "poster_path": "/MoEKaPFHABtA1xKoOteirGaHl1.jpg",
+                    "media_type": "tv",
+                    "name": "Money Heist",
+                    "vote_average": 8.4,
+                    "id": 71446,
+                    "first_air_date": "2017-05-02",
+                    "original_language": "es",
+                    "genre_ids": [
+                        80,
+                        18
+                    ],
+                    "backdrop_path": "/xGexTKCJDkl12dTW4YCBDXWb1AD.jpg",
+                    "overview": "To carry out the biggest heist in history, a mysterious man called The Professor recruits a band of eight robbers who have a single characteristic: none of them has anything to lose. Five months of seclusion - memorizing every step, every detail, every probability - culminate in eleven days locked up in the National Coinage and Stamp Factory of Spain, surrounded by police forces and with dozens of hostages in their power, to find out whether their suicide wager will lead to everything or nothing.",
+                    "origin_country": [
+                        "ES"
+                    ]
+                },
+                {
+                    "original_name": "Vis a Vis: El Oasis",
+                    "vote_count": 1465,
+                    "poster_path": "/7EOWkNGxXq2MBZxfV3ZxjRM4vlH.jpg",
+                    "media_type": "tv",
+                    "name": "Locked Up: The Oasis",
+                    "vote_average": 8,
+                    "id": 45871,
+                    "first_air_date": "2020-04-20",
+                    "original_language": "es",
+                    "genre_ids": [
+                        18
+                    ],
+                    "backdrop_path": "/7wm4CH6LbsFul4wWmmfXGcStVsk.jpg",
+                    "overview": "After a few years dedicating themselves to robbing jewelers, banks and casinos, it is time for Macarena and Zulema to separate.",
+                    "origin_country": [
+                        "ES"
+                    ]
+                },
+                {
+                    "original_name": "Vis a vis",
+                    "vote_count": 1194,
+                    "poster_path": "/1kH9u5DkoDUuIlhFFWjz9VSlKhC.jpg",
+                    "media_type": "tv",
+                    "name": "Locked Up",
+                    "vote_average": 8,
+                    "id": 62455,
+                    "first_air_date": "2015-04-20",
+                    "original_language": "es",
+                    "genre_ids": [
+                        18
+                    ],
+                    "backdrop_path": "/iukGFUQQWUdgwTGGDLb1Pw3GoZP.jpg",
+                    "overview": "Set up to take the blame for corporate fraud, young Macarena Ferreiro is locked up in a high-security women's prison surrounded by tough, ruthless criminals in this tense, provocative Spanish thriller.",
+                    "origin_country": [
+                        "ES"
+                    ]
+                }
+            ],
+            "name": "Alba Flores"
+        },
+        {
+            "popularity": 22.696,
+            "known_for_department": "Acting",
+            "name": "Jackie Chan",
+            "id": 18897,
+            "profile_path": "/sVuTm1w5G6ofrx4lRjy64D7MRiS.jpg",
+            "adult": false,
+            "known_for": [
+                {
+                    "poster_path": "/wWt4JYXTg5Wr3xBW2phBrMKgp3x.jpg",
+                    "vote_count": 7591,
+                    "video": false,
+                    "media_type": "movie",
+                    "id": 9502,
+                    "adult": false,
+                    "backdrop_path": "/ykdS8bR7eKwjANHeVSSsdyU45ia.jpg",
+                    "original_language": "en",
+                    "original_title": "Kung Fu Panda",
+                    "genre_ids": [
+                        12,
+                        16,
+                        35,
+                        10751
+                    ],
+                    "title": "Kung Fu Panda",
+                    "vote_average": 7.1,
+                    "overview": "When the Valley of Peace is threatened, lazy Po the panda discovers his destiny as the \"chosen one\" and trains to become a kung fu hero, but transforming the unsleek slacker into a brave warrior won't be easy. It's up to Master Shifu and the Furious Five -- Tigress, Crane, Mantis, Viper and Monkey -- to give it a try.",
+                    "release_date": "2008-06-04"
+                },
+                {
+                    "poster_path": "/mtqqD00vB4PGRt20gWtGqFhrkd0.jpg",
+                    "vote_count": 4487,
+                    "video": false,
+                    "media_type": "movie",
+                    "id": 49444,
+                    "adult": false,
+                    "backdrop_path": "/iKJNE3QV0wEc9VMFuHYSZVhmSN9.jpg",
+                    "original_language": "en",
+                    "original_title": "Kung Fu Panda 2",
+                    "genre_ids": [
+                        16,
+                        10751
+                    ],
+                    "title": "Kung Fu Panda 2",
+                    "vote_average": 6.8,
+                    "overview": "Po is now living his dream as The Dragon Warrior, protecting the Valley of Peace alongside his friends and fellow kung fu masters, The Furious Five - Tigress, Crane, Mantis, Viper and Monkey. But Po’s new life of awesomeness is threatened by the emergence of a formidable villain, who plans to use a secret, unstoppable weapon to conquer China and destroy kung fu. It is up to Po and The Furious Five to journey across China to face this threat and vanquish it. But how can Po stop a weapon that can stop kung fu? He must look to his past and uncover the secrets of his mysterious origins; only then will he be able to unlock the strength he needs to succeed.",
+                    "release_date": "2011-05-25"
+                },
+                {
+                    "poster_path": "/tAMQREOoztvluqrfHiGHFVfB04B.jpg",
+                    "vote_count": 3936,
+                    "video": false,
+                    "media_type": "movie",
+                    "id": 38575,
+                    "adult": false,
+                    "backdrop_path": "/y2Cl2LBYaabgtSLlOa4VqnOiNin.jpg",
+                    "original_language": "en",
+                    "original_title": "The Karate Kid",
+                    "genre_ids": [
+                        28,
+                        12,
+                        18,
+                        10751
+                    ],
+                    "title": "The Karate Kid",
+                    "vote_average": 6.4,
+                    "overview": "12-year-old Dre Parker could have been the most popular kid in Detroit, but his mother's latest career move has landed him in China. Dre immediately falls for his classmate Mei Ying but the cultural differences make such a friendship impossible. Even worse, Dre's feelings make him an enemy of the class bully, Cheng. With no friends in a strange land, Dre has nowhere to turn but maintenance man Mr. Han, who is a kung fu master. As Han teaches Dre that kung fu is not about punches and parries, but maturity and calm, Dre realizes that facing down the bullies will be the fight of his life.",
+                    "release_date": "2010-06-10"
+                }
+            ],
+            "gender": 2
+        },
+        {
+            "popularity": 17.427,
+            "known_for_department": "Acting",
+            "name": "Cillian Murphy",
+            "id": 2037,
+            "profile_path": "/iskfBLuf2nWvzqEFySrhGUAhGIG.jpg",
+            "adult": false,
+            "known_for": [
+                {
+                    "poster_path": "/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
+                    "vote_count": 26697,
+                    "video": false,
+                    "media_type": "movie",
+                    "id": 27205,
+                    "adult": false,
+                    "backdrop_path": "/s3TBrRGB1iav7gFOCNx3H31MoES.jpg",
+                    "original_language": "en",
+                    "original_title": "Inception",
+                    "genre_ids": [
+                        28,
+                        12,
+                        878
+                    ],
+                    "title": "Inception",
+                    "vote_average": 8.3,
+                    "overview": "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: \"inception\", the implantation of another person's idea into a target's subconscious.",
+                    "release_date": "2010-07-15"
+                },
+                {
+                    "poster_path": "/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+                    "vote_count": 22945,
+                    "video": false,
+                    "media_type": "movie",
+                    "id": 155,
+                    "adult": false,
+                    "backdrop_path": "/hkBaDkMWbLaf8B1lsWsKX7Ew3Xq.jpg",
+                    "original_language": "en",
+                    "original_title": "The Dark Knight",
+                    "genre_ids": [
+                        28,
+                        80,
+                        18,
+                        53
+                    ],
+                    "title": "The Dark Knight",
+                    "vote_average": 8.4,
+                    "overview": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.",
+                    "release_date": "2008-07-16"
+                },
+                {
+                    "poster_path": "/85cWkCVftiVs0BVey6pxX8uNmLt.jpg",
+                    "vote_count": 16410,
+                    "video": false,
+                    "media_type": "movie",
+                    "id": 49026,
+                    "adult": false,
+                    "backdrop_path": "/cKPfiu9IcCW0fMdKdQBXe3PRtTZ.jpg",
+                    "original_language": "en",
+                    "original_title": "The Dark Knight Rises",
+                    "genre_ids": [
+                        28,
+                        80,
+                        18,
+                        53
+                    ],
+                    "title": "The Dark Knight Rises",
+                    "vote_average": 7.7,
+                    "overview": "Following the death of District Attorney Harvey Dent, Batman assumes responsibility for Dent's crimes to protect the late attorney's reputation and is subsequently hunted by the Gotham City Police Department. Eight years later, Batman encounters the mysterious Selina Kyle and the villainous Bane, a new terrorist leader who overwhelms Gotham's finest. The Dark Knight resurfaces to protect a city that has branded him an enemy.",
+                    "release_date": "2012-07-16"
+                }
+            ],
+            "gender": 2
+        },
+        {
+            "popularity": 26.038,
+            "known_for_department": "Acting",
+            "name": "Sivabalan Tavamany",
+            "id": 1996539,
+            "profile_path": "/9u9PkuRWm8y8LLNroy5JMEG8orO.jpg",
+            "adult": false,
+            "known_for": [
+                {
+                    "original_name": "ஜெராண்டுட் நினைவுகள்",
+                    "id": 78007,
+                    "media_type": "tv",
+                    "name": "Jerantut Ninaivugal",
+                    "vote_count": 0,
+                    "vote_average": 0,
+                    "first_air_date": "2012-11-12",
+                    "poster_path": null,
+                    "genre_ids": [
+                        18
+                    ],
+                    "original_language": "ta",
+                    "backdrop_path": null,
+                    "overview": "Tamil drama series.",
+                    "origin_country": [
+                        "MY"
+                    ]
+                }
+            ],
+            "gender": 2
+        },
+        {
+            "popularity": 15.61,
+            "known_for_department": "Acting",
+            "gender": 1,
+            "id": 947514,
+            "profile_path": "/6OrC7CNSAMsf7Y96iPc53jIpmFr.jpg",
+            "adult": false,
+            "known_for": [
+                {
+                    "original_name": "La casa de papel",
+                    "vote_count": 8279,
+                    "poster_path": "/MoEKaPFHABtA1xKoOteirGaHl1.jpg",
+                    "media_type": "tv",
+                    "name": "Money Heist",
+                    "vote_average": 8.4,
+                    "id": 71446,
+                    "first_air_date": "2017-05-02",
+                    "original_language": "es",
+                    "genre_ids": [
+                        80,
+                        18
+                    ],
+                    "backdrop_path": "/xGexTKCJDkl12dTW4YCBDXWb1AD.jpg",
+                    "overview": "To carry out the biggest heist in history, a mysterious man called The Professor recruits a band of eight robbers who have a single characteristic: none of them has anything to lose. Five months of seclusion - memorizing every step, every detail, every probability - culminate in eleven days locked up in the National Coinage and Stamp Factory of Spain, surrounded by police forces and with dozens of hostages in their power, to find out whether their suicide wager will lead to everything or nothing.",
+                    "origin_country": [
+                        "ES"
+                    ]
+                },
+                {
+                    "release_date": "2020-04-03",
+                    "id": 689249,
+                    "vote_count": 360,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 7.8,
+                    "title": "Money Heist: The Phenomenon",
+                    "genre_ids": [
+                        99
+                    ],
+                    "original_title": "La casa de papel: El fenómeno",
+                    "original_language": "es",
+                    "adult": false,
+                    "backdrop_path": "/yEBBtk1eyZltGgJt8Z2zi3KIvvX.jpg",
+                    "overview": "A documentary on why and how 'Money Heist' sparked a wave of enthusiasm around the world for a lovable group of thieves and their professor.",
+                    "poster_path": "/5E7gI52iwkXV9BEo5IfTKj36Lw7.jpg"
+                },
+                {
+                    "release_date": "2017-10-12",
+                    "id": 477033,
+                    "vote_count": 291,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 6.2,
+                    "title": "Errementari: The Blacksmith and the Devil",
+                    "genre_ids": [
+                        14,
+                        27
+                    ],
+                    "original_title": "Errementari",
+                    "original_language": "eu",
+                    "adult": false,
+                    "backdrop_path": "/xhoHM4zEY359isn59VeFJTdXejY.jpg",
+                    "overview": "Basque Country, Spain, 1843. A police constable arrives at a small village in Álava to investigate a mysterious blacksmith who lives alone deep in the woods.",
+                    "poster_path": "/ltpi1uLkvx2BKHWwbpMjqdAtdHn.jpg"
+                }
+            ],
+            "name": "Itziar Ituño"
+        },
+        {
+            "popularity": 18.736,
+            "known_for_department": "Acting",
+            "gender": 1,
+            "id": 109513,
+            "profile_path": "/lh5zibQXYH1MNqkuX8TmxyNYHhK.jpg",
+            "adult": false,
+            "known_for": [
+                {
+                    "release_date": "2015-05-27",
+                    "id": 254128,
+                    "vote_count": 6046,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 6.1,
+                    "title": "San Andreas",
+                    "genre_ids": [
+                        28,
+                        18,
+                        53
+                    ],
+                    "original_title": "San Andreas",
+                    "original_language": "en",
+                    "adult": false,
+                    "backdrop_path": "/xYRUnZvUOrAhCw8CrBSLtbVVwNl.jpg",
+                    "overview": "In the aftermath of a massive earthquake in California, a rescue-chopper pilot makes a dangerous journey across the state in order to rescue his estranged daughter.",
+                    "poster_path": "/2Gfjn962aaFSD6eST6QU3oLDZTo.jpg"
+                },
+                {
+                    "release_date": "2017-05-12",
+                    "id": 339846,
+                    "vote_count": 5829,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 6.1,
+                    "title": "Baywatch",
+                    "genre_ids": [
+                        28,
+                        35
+                    ],
+                    "original_title": "Baywatch",
+                    "original_language": "en",
+                    "adult": false,
+                    "backdrop_path": "/6QmX2BDVr1hIOIPHqnxvp1C1ZZp.jpg",
+                    "overview": "Devoted lifeguard Mitch Buchannon butts heads with a brash new recruit. Together, they uncover a local criminal plot that threatens the future of the Bay.",
+                    "poster_path": "/6HE4xd8zloDqmjMZuhUCCw2UcY1.jpg"
+                },
+                {
+                    "release_date": "2010-02-01",
+                    "id": 32657,
+                    "vote_count": 5287,
+                    "video": false,
+                    "media_type": "movie",
+                    "vote_average": 6.2,
+                    "title": "Percy Jackson & the Olympians: The Lightning Thief",
+                    "genre_ids": [
+                        12,
+                        14,
+                        10751
+                    ],
+                    "original_title": "Percy Jackson & the Olympians: The Lightning Thief",
+                    "original_language": "en",
+                    "adult": false,
+                    "backdrop_path": "/sEyNWq9985lyUrwayWnvicT4FHA.jpg",
+                    "overview": "Accident prone teenager, Percy discovers he's actually a demi-God, the son of Poseidon, and he is needed when Zeus' lightning is stolen. Percy must master his new found skills in order to prevent a war between the Gods that could devastate the entire world.",
+                    "poster_path": "/brzpTyZ5bnM7s53C1KSk1TmrMO6.jpg"
+                }
+            ],
+            "name": "Alexandra Daddario"
+        },
+        {
+            "popularity": 19.496,
+            "known_for_department": "Acting",
+            "name": "Milla Jovovich",
+            "id": 63,
+            "profile_path": "/usWnHCzbADijULREZYSJ0qfM00y.jpg",
+            "adult": false,
+            "known_for": [
+                {
+                    "poster_path": "/fPtlCO1yQtnoLHOwKtWz7db6RGU.jpg",
+                    "vote_count": 7498,
+                    "video": false,
+                    "media_type": "movie",
+                    "id": 18,
+                    "adult": false,
+                    "backdrop_path": "/fuiKROO8Xm0LbGnekpR6nv4eC2Y.jpg",
+                    "original_language": "en",
+                    "original_title": "The Fifth Element",
+                    "genre_ids": [
+                        28,
+                        12,
+                        14,
+                        878,
+                        53
+                    ],
+                    "title": "The Fifth Element",
+                    "vote_average": 7.5,
+                    "overview": "In 2257, a taxi driver is unintentionally given the task of saving a young girl who is part of the key that will ensure the survival of humanity.",
+                    "release_date": "1997-05-02"
+                },
+                {
+                    "poster_path": "/uoXZOT9dGDtrZNgOSOOKOXlV4XT.jpg",
+                    "vote_count": 4201,
+                    "video": false,
+                    "media_type": "movie",
+                    "id": 1576,
+                    "adult": false,
+                    "backdrop_path": "/4Ni6XbdQV4xpR9IrT94BXH8PCcw.jpg",
+                    "original_language": "en",
+                    "original_title": "Resident Evil",
+                    "genre_ids": [
+                        28,
+                        27,
+                        878
+                    ],
+                    "title": "Resident Evil",
+                    "vote_average": 6.6,
+                    "overview": "When a virus leaks from a top-secret facility, turning all resident researchers into ravenous zombies and their lab animals into mutated hounds from hell, the government sends in an elite military task force to contain the outbreak. Alice and Rain are charged with leading the mission. But they only have three hours before the pathogen becomes airborne and infects the world.",
+                    "release_date": "2002-03-15"
+                },
+                {
+                    "poster_path": "/3ihaCjYmQ1vIh6PNvlZ2rdBRSak.jpg",
+                    "vote_count": 2918,
+                    "video": false,
+                    "media_type": "movie",
+                    "id": 9398,
+                    "adult": false,
+                    "backdrop_path": "/oMqAclK9lSn48GbpWo3mFxCy8XR.jpg",
+                    "original_language": "en",
+                    "original_title": "Zoolander",
+                    "genre_ids": [
+                        35
+                    ],
+                    "title": "Zoolander",
+                    "vote_average": 6.1,
+                    "overview": "Clear the runway for Derek Zoolander, VH1's three-time male model of the year. His face falls when hippie-chic \"he's so hot right now\" Hansel scooters in to steal this year's award. The evil fashion guru Mugatu seizes the opportunity to turn Derek into a killing machine. Its a well-designed conspiracy and only with the help of Hansel and a few well-chosen accessories can Derek make the world safe.",
+                    "release_date": "2001-09-28"
+                }
+            ],
+            "gender": 1
+        }
+    ]
+}

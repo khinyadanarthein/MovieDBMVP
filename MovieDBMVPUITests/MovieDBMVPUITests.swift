@@ -9,35 +9,81 @@
 import XCTest
 
 class MovieDBMVPUITests: XCTestCase {
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+    
+    let app = XCUIApplication()
+    
+    func test_tab_bar_button_navigate_success() {
+        app.launch()
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // UI tests must launch the application that they test.
+    
+    func test_slide_video_swipe_check_index() {
+        
         let app = XCUIApplication()
         app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let collectionViewsQuery = app.collectionViews
+        let slide = collectionViewsQuery/*@START_MENU_TOKEN@*/.cells.collectionViews.cells/*[[".scrollViews.cells.collectionViews",".scrollViews.cells",".cells",".cells.collectionViews"],[[[-1,3,1],[-1,0,1]],[[-1,2],[-1,1]]],[0,0]]@END_MENU_TOKEN@*/.children(matching: .other).element.children(matching: .other).element
+        sleep(2)
+        slide.tap()
+        slide.swipeLeft()
+    
+    }
+//
+//    func test_video_play() {
+//
+//        let app = XCUIApplication()
+//       app.launch()
+//        app.collectionViews/*@START_MENU_TOKEN@*/.cells.collectionViews.cells/*[[".scrollViews.cells.collectionViews",".scrollViews.cells",".cells",".cells.collectionViews"],[[[-1,3,1],[-1,0,1]],[[-1,2],[-1,1]]],[0,0]]@END_MENU_TOKEN@*/.buttons["play.fill"].tap()
+//        sleep(2)
+//        app.children(matching: .window).element(boundBy: 1).children(matching: .other).element.tap()
+//        app/*@START_MENU_TOKEN@*/.buttons["Play/Pause"]/*[[".buttons[\"Pause\"]",".buttons[\"Play\/Pause\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//
+//    }
+    
+    func test_best_movie_click_route_to_detail() {
+        
+        let app = XCUIApplication()
+        app.launch()
+        app.collectionViews.containing(.other, identifier:"Vertical scroll bar, 3 pages").children(matching: .scrollView).element(boundBy: 1).children(matching: .cell).element(boundBy: 1).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
+        
+        close_detail_page_success()
     }
 
-    func testLaunchPerformance() {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-                XCUIApplication().launch()
-            }
-        }
+    /**
+         close detail screen success
+    */
+    func close_detail_page_success() {
+        sleep(2)
+        XCTAssertNotNil(app.images["closeDetailBtn"])
+        app/*@START_MENU_TOKEN@*/.images["closeDetailBtn"]/*[[".scrollViews",".images[\"lessthan.circle\"]",".images[\"closeDetailBtn\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+        sleep(2)
+    }
+    
+    func test_genre_title_click() {
+        
+        let app = XCUIApplication()
+        app.launch()
+        let bestPopularFilmsAndSerialsStaticText = app.collectionViews.staticTexts["BEST POPULAR FILMS AND SERIALS"]
+        bestPopularFilmsAndSerialsStaticText/*@START_MENU_TOKEN@*/.swipeRight()/*[[".swipeUp()",".swipeRight()"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        bestPopularFilmsAndSerialsStaticText.swipeUp()
+        app.collectionViews/*@START_MENU_TOKEN@*/.cells.collectionViews.cells/*[[".scrollViews.cells.collectionViews",".scrollViews.cells",".cells",".cells.collectionViews"],[[[-1,3,1],[-1,0,1]],[[-1,2],[-1,1]]],[0,0]]@END_MENU_TOKEN@*/.staticTexts["Adventure"].tap()
+        
+    }
+    
+    func test_genre_movie_click() {
+        XCUIApplication().collectionViews/*@START_MENU_TOKEN@*/.cells.staticTexts["Check Movie Show Time"].swipeRight()/*[[".scrollViews.cells.staticTexts[\"Check Movie Show Time\"]",".swipeUp()",".swipeRight()",".cells.staticTexts[\"Check Movie Show Time\"]"],[[[-1,3,1],[-1,0,1]],[[-1,2],[-1,1]]],[0,0]]@END_MENU_TOKEN@*/
+               
+    }
+    
+    
+    func test_detail_movie_trailer() {
+        
+        let app = XCUIApplication()
+        app.launch()
+        app.collectionViews.containing(.other, identifier:"Vertical scroll bar, 3 pages").children(matching: .scrollView).element(boundBy: 1).children(matching: .cell).element(boundBy: 1).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
+        
+        
+        app.scrollViews.otherElements.buttons[" PLAY TRAILER"].tap()
+        XCTAssertNotNil(app.children(matching: .window).element(boundBy: 1).children(matching: .other).element)
+        //close_detail_page_success()
     }
 }

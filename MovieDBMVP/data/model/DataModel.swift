@@ -13,7 +13,7 @@ protocol DataModel {
     func getMovieSlidesFromAPI(page: Int, apiKey: String, sortkey : String)
     func getMovieSlides() -> Observable<[MainVideoVO]>
     func getMovieVideo(id : Int, success: @escaping (MovieVideoDetailVO) -> Void, fail: @escaping (String) -> Void)
-    func getMovieSlidesDetail() -> [MovieVideoDetailVO]
+    //func getMovieSlidesDetail() -> [MovieVideoDetailVO]
     
     func getBestPopularMoviesFromAPI(page: Int, apiKey: String)
     func getBestPopularMovies() -> Observable<[BestMovieVO]>
@@ -23,7 +23,6 @@ protocol DataModel {
     
     func getGenreMovieListFromAPI(page : Int, genreId: Int, apiKey: String)
     func getGenresMovieList() -> Observable<[GenreMovieVO]>
-    func getGenre()
     
     func getShowcaseListFromAPI(page : Int, date: String, apiKey: String)
     func getShowcaseList() -> Observable<[MovieShowCaseVO]>

@@ -66,10 +66,6 @@ class DetailViewController: UIViewController {
     
     fileprivate func bindData(movie : MovieDetailVO) {
         
-        //let data = RealmHelper.shared.getMovieDetailById(id: self.id)
-        
-        //if let movie = data {
-        
         let imageURL = IMAGE_URL_PATH + movie.posterPath
         let url = URL(string: imageURL)
         
@@ -125,7 +121,7 @@ class DetailViewController: UIViewController {
             stackGenre.addArrangedSubview(labelGenre)
         }
         if movie.genres.count > 0 {
-            self.lbType.text?.removeLast()
+            self.lbType.text?.removeLast(2)
         }
         self.lbPremiereDate.text = movie.releaseDate
         if movie.productionCompanies.count > 0 {

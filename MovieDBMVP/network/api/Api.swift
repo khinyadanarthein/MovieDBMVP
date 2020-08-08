@@ -26,9 +26,6 @@ protocol Api {
     //MARK: -Actor List
     func getPopularActors(page : Int, apiKey : String) -> Observable<MovieCastDetailResponse>
     
-    // testing
-    func getGenre(id : Int, success: @escaping (GenreResponse) -> Void, fail: @escaping (String) -> Void)
-    
     //MARK: -Detail
     func getMovieDetail(id : Int, apiKey : String, success: @escaping (MovieDetailVO) -> Void, fail: @escaping (String) -> Void)
     func getMovieCredits(movieId : Int, apiKey : String) -> Observable<MovieCreditResponse>

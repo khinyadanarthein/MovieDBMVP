@@ -12,8 +12,8 @@ import RxSwift
 protocol Dao {
     func saveSlideVideos(data:[MainVideoVO]) -> Observable<Bool>
     func getMovieSlides() -> Observable<[MainVideoVO]>
-    func saveVideoDetail(data: MovieVideoDetailVO) -> Observable<Bool>
-    func getMovieSlidesDetail() -> [MovieVideoDetailVO]
+    //func saveVideoDetail(data: MovieVideoDetailVO) -> Observable<Bool>
+    //func getMovieSlidesDetail() -> [MovieVideoDetailVO]
     
     func saveBestPopularMovies(data:[BestMovieVO]) -> Observable<Bool>
     func getPopularMovies() -> Observable<[BestMovieVO]>
@@ -32,9 +32,6 @@ protocol Dao {
     func getShowcaseMovies() -> Observable<[MovieShowCaseVO]>
     
     //MARK: -Detail
-    
-    func saveMovieDetail(data : MovieDetailVO) -> Observable<Bool>
-    func getMovieDetailById(id: Int) -> MovieDetailVO?
     
     func getMovieCasts() -> Observable<[MovieCastVO]>
     func getMovieCrews() -> Observable<[MovieCrewVO]>

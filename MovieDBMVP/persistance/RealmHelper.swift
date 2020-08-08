@@ -236,11 +236,6 @@ class RealmHelper: Dao {
         })
     }
     
-    func getMovieDetailById(id: Int) -> MovieDetailVO? {
-        let movie = self.realm.objects(MovieDetailVO.self).filter("id = %@",id).first!
-        return movie
-    }
-    
     func getMovieCasts() -> Observable<[MovieCastVO]> {
         let casts = realm.objects(MovieCastVO.self)
         return Observable.array(from: casts)

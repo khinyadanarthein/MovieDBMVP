@@ -29,7 +29,7 @@ class DataModelImpl: DataModel {
     
     func getMovieVideo(id: Int, success: @escaping (MovieVideoDetailVO) -> Void, fail: @escaping (String) -> Void) {
         return api.getMovieVideo(id: id, success: { (data) in
-            _ = self.db.saveVideoDetail(data: data)
+            //_ = self.db.saveVideoDetail(data: data)
             success(data)
             
         }) { (error) in
@@ -38,9 +38,6 @@ class DataModelImpl: DataModel {
         }
     }
     
-    func getMovieSlidesDetail() -> [MovieVideoDetailVO] {
-        db.getMovieSlidesDetail()
-    }
             
     func getBestPopularMoviesFromAPI(page: Int, apiKey: String) {
         _ = api.getPopularMovies(page: page, apiKey: apiKey)
@@ -61,15 +58,6 @@ class DataModelImpl: DataModel {
     
     func getGenresList() -> Observable<[GenreVO]> {
         db.getGenres()
-    }
-    
-    func getGenre() {
-        api.getGenre(id: 12, success: { (data) in
-            print("Genre \(data.genres.count)")
-            
-        }) { (error) in
-            print(error)
-        }
     }
     
     func getGenresMovieList() -> Observable<[GenreMovieVO]> {
@@ -110,7 +98,6 @@ class DataModelImpl: DataModel {
     func getMovieDetail(id: Int, apiKey: String, success: @escaping (MovieDetailVO) -> Void, fail: @escaping (String) -> Void) {
         
         return api.getMovieDetail(id: id, apiKey: apiKey, success: { (data) in
-            _ = self.db.saveMovieDetail(data: data)
             success(data)
             
         }) { (error) in

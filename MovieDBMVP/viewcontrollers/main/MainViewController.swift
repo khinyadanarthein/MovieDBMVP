@@ -374,7 +374,7 @@ extension MainViewController : UICollectionViewDataSource, UICollectionViewDeleg
             cell.updateIndex = mPresenter.updatedSlideIndex
             cell.videoDataList = mPresenter.slidemMovieVideo
             //cell.cvSlideVideo.reloadItems(at: [IndexPath(row: mPresenter.updatedSlideIndex, section: 0)])
-
+            cell.cvSlideVideo.scrollToItem(at: IndexPath(row: mPresenter.updatedSlideIndex, section: 0), at: .centeredHorizontally, animated: false)
           }
           return cell
            

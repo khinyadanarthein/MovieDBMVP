@@ -25,32 +25,7 @@ extension DetailPresenterImpl : DetailPresenter {
     
     func onUIReady(movieId : Int) {
         mView?.showLoading()
-//       
-//        model.getMovieCreditsFromAPI(movieId: movieId, apiKey: API_KEY)
-//        model.getMovieCasts()
-//            .observeOn(MainScheduler.instance)
-//            .subscribe(onNext:{ data in
-//                self.mView?.hideLoading()
-//                self.movieCastList = data
-//                self.mView?.reloadCastList()
-//                
-//            },onError:{ error in
-//                self.mView?.hideLoading()
-//                self.mView?.showErrorMessage(title: "Loding Error",err: error.localizedDescription)
-//            }).disposed(by: bag)
-//        
-//        model.getMovieCrews()
-//            .observeOn(MainScheduler.instance)
-//            .subscribe(onNext:{ data in
-//                self.mView?.hideLoading()
-//                self.movieCrewList = data
-//                self.mView?.reloadCrewList()
-//                
-//            },onError:{ error in
-//                self.mView?.hideLoading()
-//                self.mView?.showErrorMessage(title: "Loding Error",err: error.localizedDescription)
-//            }).disposed(by: bag)
-//        
+
         model.getMovieCredits(id: movieId, apiKey: API_KEY, success: { (data) in
             self.mView?.hideLoading()
             self.movieCastList = data.cast
