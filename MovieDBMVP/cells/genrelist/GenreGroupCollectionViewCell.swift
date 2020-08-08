@@ -18,9 +18,17 @@ class GenreGroupCollectionViewCell: UICollectionViewCell {
         return "GenreGroupCollectionViewCell"
     }
     
+    var genreDelegate : GenreTileDelegate!
+    var detailDelegate : MovieDetailDelegate!
+    
     var genreList = [GenreVO]()
     var movieList = [GenreMovieVO]()
-    var cellMovieList : [BestMovieVO]!
+    var selectedTitle : Int! {
+        didSet{
+            cvGenreTitle.reloadData()
+            cvGenreList.reloadData()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,7 +47,6 @@ class GenreGroupCollectionViewCell: UICollectionViewCell {
         cvGenreList.setCollectionViewLayout(generateCompositionalLayoutForList(), animated: false)
         
         cvGenreTitle.selectItem(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: .left)
-        
         
     }
     
@@ -114,10 +121,8 @@ extension GenreGroupCollectionViewCell : UICollectionViewDataSource, UICollectio
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GenreTitleCollectionViewCell.identifier, for: indexPath) as? GenreTitleCollectionViewCell else {
                 return UICollectionViewCell()
             }
+            cell.selectTitle = selectedTitle
             cell.mData = genreList[indexPath.row]
-            if cell.isSelected {
-                cell.viewSelectedColor.backgroundColor = UIColor(named: "tint-color")
-            }
             
             return cell
         } else {
@@ -133,6 +138,13 @@ extension GenreGroupCollectionViewCell : UICollectionViewDataSource, UICollectio
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         print("select index \(indexPath.row)")
+        if collectionView == cvGenreTitle {
+            genreDelegate.onTapTitle(id: genreList[indexPath.row].id)
+
+        } else {
+            detailDelegate.onTapMovie(movieId: movieList[indexPath.row].id)
+        }
+        
     }
     
 }

@@ -70,6 +70,8 @@ class MainViewController: UIViewController {
       
       mainCollectionView.register(UINib(nibName: SlideVideoCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: SlideVideoCollectionViewCell.identifier)
       
+      mainCollectionView.register(UINib(nibName: ShowCaseCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ShowCaseCollectionViewCell.identifier)
+      
       mainCollectionView.register(UINib(nibName: PersonCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: PersonCollectionViewCell.identifier)
       
       mainCollectionView.register(UINib(nibName: TitleCollectionReusableView.identifier, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: TitleCollectionReusableView.identifier)
@@ -100,22 +102,37 @@ extension MainViewController : MainPageView {
     
     func showMovieSlides(data: [MainVideoVO]) {
         self.mPresenter.movieSlides = data
-        self.mainCollectionView.reloadData()
+        self.mainCollectionView.reloadSections(IndexSet(integer: HomeSection.PagingVideo.rawValue))
     }
     
-    func loadMovieVideo(data: [MovieVideoDetailVO]) {
-        self.mainCollectionView.reloadData()
+    func loadSlideVideo(data: MovieVideoDetailVO, index: Int) {
+        self.mainCollectionView.reloadSections(IndexSet(integer: HomeSection.PagingVideo.rawValue))
     }
     
     func showBestMovieList(data: [BestMovieVO]) {
-        self.mainCollectionView.reloadData()
+        self.mainCollectionView.reloadSections(IndexSet(integer: HomeSection.BestPopular.rawValue))
     }
     
-    func showGenreList(data: [GenreVO]) {
-        self.mainCollectionView.reloadData()
+    func showGenreList() {
+        self.mainCollectionView.reloadSections(IndexSet(integer: HomeSection.GenreGroup.rawValue))
     }
     func loadingCollectionData() {
-        self.mainCollectionView.reloadData()
+        //self.mainCollectionView.reloadData()
+    }
+    
+    func showShowCaseList() {
+        self.mainCollectionView.reloadSections(IndexSet(integer: HomeSection.Showcase.rawValue))
+    }
+    func showActorList(data: [MovieCastDetailVO]) {
+        self.mPresenter.actorList = data
+        self.mainCollectionView.reloadSections(IndexSet(integer: HomeSection.Actor.rawValue))
+    }
+    func loadShowcaseVideo(data: MovieVideoDetailVO, index: Int) {
+        self.mainCollectionView.reloadItems(at: [IndexPath(row: index, section: HomeSection.Showcase.rawValue)])
+        //mainCollectionView.reloadSections(Inds)
+    }
+    func navigateToMovieDetail(movie: MovieDetailVO) {
+        self.navigateToDetail(movie: movie)
     }
 }
 
@@ -332,10 +349,10 @@ extension MainViewController : UICollectionViewDataSource, UICollectionViewDeleg
             return 1
             
         case HomeSection.Showcase.rawValue :
-            return 10
+            return mPresenter.showcaseList.count
             
         case HomeSection.Actor.rawValue :
-            return 10
+            return mPresenter.actorList.count
             
         default:
             break
@@ -352,8 +369,13 @@ extension MainViewController : UICollectionViewDataSource, UICollectionViewDeleg
               return UICollectionViewCell()
           }
           cell.slideVideoList = mPresenter.movieSlides
-          //cell.movieVideo = mPresenter.movieVideo
           cell.mDelegate = self
+          if mPresenter.slidemMovieVideo.count > 0 {
+            cell.updateIndex = mPresenter.updatedSlideIndex
+            cell.videoDataList = mPresenter.slidemMovieVideo
+            //cell.cvSlideVideo.reloadItems(at: [IndexPath(row: mPresenter.updatedSlideIndex, section: 0)])
+
+          }
           return cell
            
         case HomeSection.BestPopular.rawValue:
@@ -374,20 +396,37 @@ extension MainViewController : UICollectionViewDataSource, UICollectionViewDeleg
                 return UICollectionViewCell()
             }
             cell.genreList = mPresenter.genreList
-            print("genre list \(mPresenter.genreList.count)")
+            cell.movieList = mPresenter.genreMovieList
+            cell.selectedTitle = mPresenter.selectedGenre
+            cell.cvGenreList.reloadData()
+            cell.cvGenreTitle.reloadData()
+            cell.genreDelegate = self
+            cell.detailDelegate = self
             return cell
             
         case HomeSection.Showcase.rawValue:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SlideVideoCollectionViewCell.identifier, for: indexPath) as? SlideVideoCollectionViewCell else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShowCaseCollectionViewCell.identifier, for: indexPath) as? ShowCaseCollectionViewCell else {
                 return UICollectionViewCell()
             }
             cell.backgroundColor = UIColor(named: "fill-color")
+            cell.mData = mPresenter.showcaseList[indexPath.row]
+            cell.mDelegate = self
+            cell.index = indexPath.row
+            let id = mPresenter.showcaseList[indexPath.row].id
+            for video in self.mPresenter.showcaseVideo {
+                if video.key == id {
+                    cell.videoData = video.value
+                }
+            }
+            
             return cell
             
         case HomeSection.Actor.rawValue:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PersonCollectionViewCell.identifier, for: indexPath) as? PersonCollectionViewCell else {
                 return UICollectionViewCell()
             }
+            cell.mData = mPresenter.actorList[indexPath.row]
+            //print("actor list \(mPresenter.actorList.count)")
             return cell
 
         default:
@@ -397,20 +436,32 @@ extension MainViewController : UICollectionViewDataSource, UICollectionViewDeleg
         return UICollectionViewCell()
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.section {
+
+        case HomeSection.BestPopular.rawValue:
+            self.mPresenter.onTapMovie(movieId: mPresenter.bestMovieList[indexPath.row].id)
+            
+        default:
+            break
+        }
+    }
 }
 
 extension MainViewController : VideoPlayDelegate {
-    func onTapPlayButton(movieId: Int) {
-        mPresenter.getMovieVideo(movieId: movieId)
+    func onTapPlayButton(movieId: Int, index : Int, section : Int) {
+        mPresenter.getMovieVideo(movieId: movieId, index: index, section: section)
     }
     
 }
+extension MainViewController : GenreTileDelegate {
+    func onTapTitle(id: Int) {
+        mPresenter.getMovieByGenreId(genreId: id)
+    }
+}
 
-extension MainViewController : UIScrollViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-       
-        
+extension MainViewController : MovieDetailDelegate {
+    func onTapMovie(movieId: Int) {
+        mPresenter.onTapMovie(movieId: movieId)
     }
 }

@@ -17,6 +17,7 @@ class GenreTitleCollectionViewCell: UICollectionViewCell {
     static var identifier : String {
         return "GenreTitleCollectionViewCell"
     }
+    var selectTitle : Int!
     
     var mData:GenreVO? = nil {
         didSet{
@@ -30,7 +31,15 @@ class GenreTitleCollectionViewCell: UICollectionViewCell {
         
         //set data
         lbTitle.text = data.name
-        
+        if selectTitle == data.id {
+            lbTitle.textColor = .white
+            viewSelectedColor.backgroundColor = UIColor(named: "tint-color")
+            
+        } else {
+            lbTitle.textColor = .darkGray
+            viewSelectedColor.backgroundColor = UIColor(named: "primary-color")
+            
+        }
     }
     override func awakeFromNib() {
         super.awakeFromNib()

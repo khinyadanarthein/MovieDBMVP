@@ -14,8 +14,13 @@ protocol MainPageView{
     func loadingCollectionData()
     
     func showMovieSlides(data:[MainVideoVO])
-    func loadMovieVideo(data : [MovieVideoDetailVO])
+    func loadSlideVideo(data : MovieVideoDetailVO, index: Int)
+    func loadShowcaseVideo(data : MovieVideoDetailVO, index: Int)
     
     func showBestMovieList(data:[BestMovieVO])
-    func showGenreList(data:[GenreVO])
+    func showGenreList()
+    func showActorList(data:[MovieCastDetailVO])
+    func showShowCaseList()
+    
+    func navigateToMovieDetail(movie : MovieDetailVO)
 }

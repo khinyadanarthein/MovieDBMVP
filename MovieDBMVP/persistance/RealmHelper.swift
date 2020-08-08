@@ -127,4 +127,210 @@ class RealmHelper: Dao {
         let genres = realm.objects(GenreVO.self)
         return Observable.array(from: genres)
     }
+    
+    func saveGenreMovies(data: [GenreMovieVO]) -> Observable<Bool> {
+        return Observable<Bool>.create({ observer -> Disposable in
+            
+            do{
+                try self.realm.write {
+                    self.realm.add(data,update: .modified)
+                    observer.onNext(true)
+                    observer.onCompleted()
+                }
+                
+            }catch let ex{
+                debugPrint(ex.localizedDescription)
+                observer.onError(NSError(domain: ex.localizedDescription, code: 500, userInfo: nil))
+            }
+            return Disposables.create {
+                
+            }
+        })
+    }
+    
+    func getGenreMovies() -> Observable<[GenreMovieVO]> {
+        let allMovies = realm.objects(GenreMovieVO.self)
+        return Observable.array(from: allMovies)
+        
+    }
+    
+    func deleteGenreMovies() {
+        do{
+        try self.realm.write {
+            realm.delete(realm.objects(GenreMovieVO.self))
+            }
+        }catch let ex{
+            debugPrint(ex.localizedDescription)
+        }
+    }
+    
+    //MARK: - Showcase
+    func saveShowcaseMovie(data: [MovieShowCaseVO]) -> Observable<Bool> {
+        return Observable<Bool>.create({ observer -> Disposable in
+            
+            do{
+                try self.realm.write {
+                    self.realm.add(data,update: .modified)
+                    observer.onNext(true)
+                    observer.onCompleted()
+                }
+                
+            }catch let ex{
+                debugPrint(ex.localizedDescription)
+                observer.onError(NSError(domain: ex.localizedDescription, code: 500, userInfo: nil))
+            }
+            return Disposables.create {
+                
+            }
+        })
+    }
+    
+    func getShowcaseMovies() -> Observable<[MovieShowCaseVO]> {
+       let genres = realm.objects(MovieShowCaseVO.self)
+        return Observable.array(from: genres)
+    }
+    
+    //MARK: - Actors
+    func saveActors(data: [MovieCastDetailVO]) -> Observable<Bool> {
+        return Observable<Bool>.create({ observer -> Disposable in
+            
+            do{
+                try self.realm.write {
+                    self.realm.add(data,update: .modified)
+                    observer.onNext(true)
+                    observer.onCompleted()
+                }
+                
+            }catch let ex{
+                debugPrint(ex.localizedDescription)
+                observer.onError(NSError(domain: ex.localizedDescription, code: 500, userInfo: nil))
+            }
+            return Disposables.create {
+                
+            }
+        })
+    }
+    
+    func getPopularActors() -> Observable<[MovieCastDetailVO]> {
+       let genres = realm.objects(MovieCastDetailVO.self)
+        return Observable.array(from: genres)
+    }
+    //MARK: - Detail
+    func saveMovieDetail(data: MovieDetailVO) -> Observable<Bool> {
+        return Observable<Bool>.create({ observer -> Disposable in
+            
+            do{
+                try self.realm.write {
+                    self.realm.add(data,update: .modified)
+                    observer.onNext(true)
+                    observer.onCompleted()
+                }
+
+            }catch let ex{
+                debugPrint(ex.localizedDescription)
+                observer.onError(NSError(domain: ex.localizedDescription, code: 500, userInfo: nil))
+            }
+            return Disposables.create {
+                
+            }
+        })
+    }
+    
+    func getMovieDetailById(id: Int) -> MovieDetailVO? {
+        let movie = self.realm.objects(MovieDetailVO.self).filter("id = %@",id).first!
+        return movie
+    }
+    
+    func getMovieCasts() -> Observable<[MovieCastVO]> {
+        let casts = realm.objects(MovieCastVO.self)
+        return Observable.array(from: casts)
+    }
+    
+    func saveMovieCredits(cast: [MovieCastVO], crew:[MovieCrewVO]) -> Observable<Bool> {
+        return Observable<Bool>.create({ observer -> Disposable in
+            
+            do{
+                try self.realm.write {
+                    self.realm.add(cast,update: .modified)
+                    self.realm.add(crew,update: .modified)
+                    observer.onNext(true)
+                    observer.onCompleted()
+                }
+
+            }catch let ex{
+                debugPrint(ex.localizedDescription)
+                observer.onError(NSError(domain: ex.localizedDescription, code: 500, userInfo: nil))
+            }
+            return Disposables.create {
+                
+            }
+        })
+    }
+    
+    func getMovieCrews() -> Observable<[MovieCrewVO]> {
+        let casts = realm.objects(MovieCrewVO.self)
+        return Observable.array(from: casts)
+    }
+    
+    func deleteOldMovieCasts() {
+        do{
+        try self.realm.write {
+            realm.delete(realm.objects(MovieCastVO.self))
+            }
+        }catch let ex{
+            debugPrint(ex.localizedDescription)
+        }
+    }
+    
+    func deleteOldMovieCredits() {
+        do{
+        try self.realm.write {
+            realm.delete(realm.objects(MovieCrewVO.self))
+            realm.delete(realm.objects(MovieCastVO.self))
+            }
+        }catch let ex{
+            debugPrint(ex.localizedDescription)
+        }
+    }
+    
+    func saveFavoritedCast(data: MovieCastVO) -> Observable<Bool> {
+        return Observable<Bool>.create({ observer -> Disposable in
+            
+            do{
+                try self.realm.write {
+                    self.realm.add(data,update: .modified)
+                    observer.onNext(true)
+                    observer.onCompleted()
+                }
+
+            }catch let ex{
+                debugPrint(ex.localizedDescription)
+                observer.onError(NSError(domain: ex.localizedDescription, code: 500, userInfo: nil))
+            }
+            return Disposables.create {
+                
+            }
+        })
+    }
+    
+    func saveFavoritedMovie(data: MovieDetailVO) -> Observable<Bool> {
+        return Observable<Bool>.create({ observer -> Disposable in
+            
+            do{
+                try self.realm.write {
+                    self.realm.add(data,update: .modified)
+                    observer.onNext(true)
+                    observer.onCompleted()
+                }
+
+            }catch let ex{
+                debugPrint(ex.localizedDescription)
+                observer.onError(NSError(domain: ex.localizedDescription, code: 500, userInfo: nil))
+            }
+            return Disposables.create {
+                
+            }
+        })
+    }
+    
 }

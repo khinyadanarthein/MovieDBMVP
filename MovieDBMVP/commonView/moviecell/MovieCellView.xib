@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieCellView" customModule="MovieDBMVP" customModuleProvider="target">
             <connections>
                 <outlet property="backImageView" destination="gZc-y8-EaH" id="KYt-fC-LFj"/>
+                <outlet property="containerView" destination="iN0-l3-epB" id="uyA-wy-KVZ"/>
                 <outlet property="lbMovieName" destination="ac1-pq-4AB" id="J1z-H0-jlo"/>
                 <outlet property="lbRatingValue" destination="e07-Ef-Ix3" id="SFA-pS-uxm"/>
                 <outlet property="mainView" destination="u9T-Ba-WcL" id="3F5-Rk-GgC"/>

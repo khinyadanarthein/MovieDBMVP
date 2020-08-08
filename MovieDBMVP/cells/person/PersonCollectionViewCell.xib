@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="211" height="329"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSM-Gc-0S3">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSM-Gc-0S3" customClass="ActorCellView" customModule="MovieDBMVP" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="211" height="329"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leo" translatesAutoresizingMaskIntoConstraints="NO" id="Yvu-0X-lKc">
@@ -87,6 +87,9 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="211" height="329"/>
+            <connections>
+                <outlet property="containerView" destination="GSM-Gc-0S3" id="EYU-tC-5nn"/>
+            </connections>
             <point key="canvasLocation" x="309.4202898550725" y="235.37946428571428"/>
         </collectionViewCell>
     </objects>

@@ -11,19 +11,27 @@ import RxSwift
 
 protocol Api {
     func getSlideVideos(page : Int, apiKey : String, sortkey : String) -> Observable<MainVideoResponse>
+    
     func getPopularMovies(page : Int, apiKey : String) -> Observable<BestMovieResponse>
+    
     func getGenreTypes(apiKey : String) -> Observable<GenreResponse>
+    
     func getMoviesByGenre(page : Int, genreId : Int, apiKey : String) -> Observable<GenreMovieResponse>
 
-    
-    //    func getShowCaseVideos(page : Int, date : String, apiKey : String) -> Observable<MovieShowCaseResponse>
-//    func getPopularActors(page : Int, apiKey : String) -> Observable<MovieCastDetailResponse>
+    func getShowCaseVideos(page : Int, date : String, apiKey : String) -> Observable<MovieShowCaseResponse>
     
     //play video
-    //func getVideoLink(movieId : Int, apiKey : String) -> Observable<MovieVideoDetailVO>
-    
     func getMovieVideo(id : Int, success: @escaping (MovieVideoDetailVO) -> Void, fail: @escaping (String) -> Void)
+   
+    //MARK: -Actor List
+    func getPopularActors(page : Int, apiKey : String) -> Observable<MovieCastDetailResponse>
     
+    // testing
     func getGenre(id : Int, success: @escaping (GenreResponse) -> Void, fail: @escaping (String) -> Void)
+    
+    //MARK: -Detail
+    func getMovieDetail(id : Int, apiKey : String, success: @escaping (MovieDetailVO) -> Void, fail: @escaping (String) -> Void)
+    func getMovieCredits(movieId : Int, apiKey : String) -> Observable<MovieCreditResponse>
+    func getMovieCreditsAll(id : Int, apiKey : String, success: @escaping (MovieCreditResponse) -> Void, fail: @escaping (String) -> Void)
     
 }

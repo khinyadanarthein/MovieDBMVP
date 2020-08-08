@@ -17,6 +17,7 @@ target 'MovieDBMVP' do
   pod "YoutubePlayer-in-WKWebView", "~> 0.3.0"
   pod 'Mocker'
   pod 'Cosmos'
+  pod 'YouTubePlayer'
 
   target 'MovieDBMVPTests' do
     inherit! :search_paths

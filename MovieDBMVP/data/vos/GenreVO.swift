@@ -12,7 +12,7 @@ import RealmSwift
 // MARK: - GenreVO
 class GenreResponse: Codable {
     
-    let genres = [GenreVO]()
+    let genres : [GenreVO]
     
     enum CodingKeys: String, CodingKey {
         case genres = "genres"

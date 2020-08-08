@@ -8,9 +8,13 @@
 
 import Foundation
 protocol GenreTileDelegate {
-    func onTapTitle(id:Int)
+    func onTapTitle(id : Int)
 }
 
 protocol VideoPlayDelegate {
-    func onTapPlayButton(movieId:Int)
+    func onTapPlayButton(movieId : Int, index : Int, section : Int)
+}
+
+protocol MovieDetailDelegate {
+    func onTapMovie(movieId : Int)
 }

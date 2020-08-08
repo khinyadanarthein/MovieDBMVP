@@ -70,17 +70,21 @@ extension ApiClient : Api {
         , value:GenreMovieResponse.self )
     }
     
-//    func getShowCaseVideos(page: Int, date: String, apiKey: String) -> Observable<MovieShowCaseResponse> {
-//        <#code#>
-//    }
-//    
-//    func getPopularActors(page: Int, apiKey: String) -> Observable<MovieCastDetailResponse> {
-//        <#code#>
-//    }
-//    
-//    func getVideoLink(movieId: Int, apiKey: String) -> Observable<MovieVideoDetailVO> {
-//        <#code#>
-//    }
+    func getShowCaseVideos(page: Int, date: String, apiKey: String) -> Observable<MovieShowCaseResponse> {
+        let url = API_DISCOVER_MOVIE
+        return  self.reuqestApiWithHeaders(url: url
+        , method: .get
+        , params: [
+            PARAM_API_KEY: apiKey
+            , PARAM_LANG: PARAM_LANGUAGE
+            , PARAM_SORT_BY : "primary_release_date.asc"
+            , PARAM_INCLUDE_VIDEO : true
+            , PARAM_PAGE: page
+            , PARAM_RELEASE_DATE : date
+            , PARAM_OR_LANGUAGE: "en"
+            , PARAM_GENRE : 12]
+        , value:MovieShowCaseResponse.self )
+    }
     
     func getMovieVideo(id : Int, success: @escaping (MovieVideoDetailVO) -> Void, fail: @escaping (String) -> Void) {
         let url = API_GET_MOVIE + "\(id)" + API_GET_MOVIE_VIDEO
@@ -125,4 +129,56 @@ extension ApiClient : Api {
         }
     }
     
+    func getPopularActors(page: Int, apiKey: String) -> Observable<MovieCastDetailResponse> {
+        let url = APU_GET_POPULAR_CAST
+        return  self.reuqestApiWithHeaders(url: url
+        , method: .get
+        , params: [
+            PARAM_API_KEY: apiKey
+            , PARAM_LANG: PARAM_LANGUAGE
+            , PARAM_PAGE: page]
+        , value:MovieCastDetailResponse.self )
+    }
+    
+    //MARK: -Detail
+    func getMovieDetail(id: Int, apiKey : String, success: @escaping (MovieDetailVO) -> Void, fail: @escaping (String) -> Void) {
+        let url = API_GET_MOVIE + "\(id)"
+        let params = [PARAM_API_KEY: API_KEY, PARAM_LANG: PARAM_LANGUAGE]
+        
+        self.requestApiWithoutObservable(url: url, method: .get, params: params, encoding: URLEncoding(destination: .queryString), success: { (response) in
+            
+            let data = try! JSONDecoder().decode(MovieDetailVO.self, from: response)
+            
+            success(data)
+            
+        }) { (error) in
+            print(error)
+            fail(error)
+        }
+    }
+    
+    func getMovieCredits(movieId: Int, apiKey : String) -> Observable<MovieCreditResponse> {
+        let url = API_GET_MOVIE + "\(movieId)/" + API_GET_MOVIE_CREDITS
+        return  self.reuqestApiWithHeaders(url: url
+        , method: .get
+        , params: [PARAM_API_KEY: apiKey]
+        , value:MovieCreditResponse.self )
+    }
+    
+    func getMovieCreditsAll(id: Int, apiKey: String, success: @escaping (MovieCreditResponse) -> Void, fail: @escaping (String) -> Void) {
+        
+        let url = API_GET_MOVIE + "\(id)/" + API_GET_MOVIE_CREDITS
+        let params = [PARAM_API_KEY: apiKey]
+        
+        self.requestApiWithoutObservable(url: url, method: .get, params: params, encoding: URLEncoding(destination: .queryString), success: { (response) in
+            
+            let data = try! JSONDecoder().decode(MovieCreditResponse.self, from: response)
+            
+            success(data)
+            
+        }) { (error) in
+            print(error)
+            fail(error)
+        }
+    }
 }

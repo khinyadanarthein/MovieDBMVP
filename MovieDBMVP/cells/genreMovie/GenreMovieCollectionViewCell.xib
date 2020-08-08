@@ -45,7 +45,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qES-rB-nY2" customClass="CosmosView" customModule="Cosmos">
-                                                <rect key="frame" x="31.5" y="9" width="80" height="12"/>
+                                                <rect key="frame" x="31.5" y="0.0" width="80" height="30"/>
                                                 <color key="backgroundColor" name="primary-color"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="filledColor">

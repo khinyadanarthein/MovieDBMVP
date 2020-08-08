@@ -18,5 +18,5 @@ class ShowTimeCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
 }

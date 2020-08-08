@@ -7,29 +7,25 @@
 //
 
 import Foundation
+import RealmSwift
 
 // MARK: - Crew
-class MovieCrewVO: Codable {
-    let creditID: String
-    let department: String
-    let gender, id: Int
-    let job, name: String
-    let profilePath: String?
+class MovieCrewVO: Object,Codable {
+    @objc dynamic var creditID: String? = ""
+    @objc dynamic var department: String? = ""
+    @objc dynamic var gender, id: Int
+    @objc dynamic var job: String? = ""
+    @objc dynamic var name: String? = ""
+    @objc dynamic var profilePath: String? = ""
 
     enum CodingKeys: String, CodingKey {
         case creditID = "credit_id"
         case department, gender, id, job, name
         case profilePath = "profile_path"
     }
-
-    init(creditID: String, department: String, gender: Int, id: Int, job: String, name: String, profilePath: String?) {
-        self.creditID = creditID
-        self.department = department
-        self.gender = gender
-        self.id = id
-        self.job = job
-        self.name = name
-        self.profilePath = profilePath
+    
+    override static func primaryKey() -> String? {
+        return "id"
     }
     
 }

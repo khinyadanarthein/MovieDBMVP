@@ -21,5 +21,21 @@ protocol DataModel {
     func getGenreListFromAPI(apiKey: String)
     func getGenresList() -> Observable<[GenreVO]>
     
-    func getGenre() 
+    func getGenreMovieListFromAPI(page : Int, genreId: Int, apiKey: String)
+    func getGenresMovieList() -> Observable<[GenreMovieVO]>
+    func getGenre()
+    
+    func getShowcaseListFromAPI(page : Int, date: String, apiKey: String)
+    func getShowcaseList() -> Observable<[MovieShowCaseVO]>
+    
+    func getActorListFromAPI(page: Int, apiKey: String)
+    func getActorList() -> Observable<[MovieCastDetailVO]>
+    
+    func getMovieDetail(id : Int, apiKey: String, success: @escaping (MovieDetailVO) -> Void, fail: @escaping (String) -> Void)
+    func getMovieCreditsFromAPI(movieId: Int, apiKey: String)
+    
+    func getMovieCredits(id : Int, apiKey: String, success: @escaping (MovieCreditResponse) -> Void, fail: @escaping (String) -> Void)
+    func getMovieCasts() -> Observable<[MovieCastVO]>
+    func getMovieCrews() -> Observable<[MovieCrewVO]>
+    
 }

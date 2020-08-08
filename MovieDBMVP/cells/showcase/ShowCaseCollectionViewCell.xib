@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,47 +17,81 @@
                 <rect key="frame" x="0.0" y="0.0" width="347" height="225"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="klx-gL-XFw">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IfV-5w-nil">
                         <rect key="frame" x="0.0" y="0.0" width="347" height="225"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYg-BD-PbT" customClass="CardView" customModule="MovieDBMVP" customModuleProvider="target">
-                                <rect key="frame" x="10" y="10" width="317" height="195"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="fGV-Bh-UfH">
-                                        <rect key="frame" x="0.0" y="0.0" width="317" height="195"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="netflix-logo" translatesAutoresizingMaskIntoConstraints="NO" id="J8N-rR-vtD">
+                                <rect key="frame" x="0.0" y="0.0" width="347" height="225"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Oj-SG-5Qf">
+                                <rect key="frame" x="138.5" y="77.5" width="70" height="70"/>
+                                <color key="backgroundColor" name="tint-color"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="fGV-Bh-UfH" secondAttribute="bottom" id="SS9-Ty-Kxm"/>
-                                    <constraint firstItem="fGV-Bh-UfH" firstAttribute="top" secondItem="NYg-BD-PbT" secondAttribute="top" id="d74-1U-jTU"/>
-                                    <constraint firstAttribute="trailing" secondItem="fGV-Bh-UfH" secondAttribute="trailing" id="hds-vP-Ae3"/>
-                                    <constraint firstItem="fGV-Bh-UfH" firstAttribute="leading" secondItem="NYg-BD-PbT" secondAttribute="leading" id="t65-D2-uaW"/>
+                                    <constraint firstAttribute="width" constant="70" id="CoK-cs-wDc"/>
+                                    <constraint firstAttribute="height" constant="70" id="MVQ-6Z-1p5"/>
                                 </constraints>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="play.fill" catalog="system">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.marksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onTapBtnPlay:" destination="gTV-IL-0wX" eventType="touchUpInside" id="NXy-YF-Hgy"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rl8-Aq-yd9" customClass="YouTubePlayerView" customModule="YouTubePlayer">
+                                <rect key="frame" x="0.0" y="0.0" width="347" height="225"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="primary-color"/>
                         <constraints>
-                            <constraint firstItem="NYg-BD-PbT" firstAttribute="leading" secondItem="klx-gL-XFw" secondAttribute="leading" constant="10" id="2H3-Yv-QHZ"/>
-                            <constraint firstAttribute="bottom" secondItem="NYg-BD-PbT" secondAttribute="bottom" constant="20" id="6ow-7v-HLY"/>
-                            <constraint firstAttribute="trailing" secondItem="NYg-BD-PbT" secondAttribute="trailing" constant="20" id="LoA-AO-WI1"/>
-                            <constraint firstItem="NYg-BD-PbT" firstAttribute="top" secondItem="klx-gL-XFw" secondAttribute="top" constant="10" id="VwR-am-SWj"/>
+                            <constraint firstItem="rl8-Aq-yd9" firstAttribute="top" secondItem="IfV-5w-nil" secondAttribute="top" id="2zN-DG-g88"/>
+                            <constraint firstItem="4Oj-SG-5Qf" firstAttribute="centerX" secondItem="J8N-rR-vtD" secondAttribute="centerX" id="ChJ-2V-g2d"/>
+                            <constraint firstItem="rl8-Aq-yd9" firstAttribute="leading" secondItem="IfV-5w-nil" secondAttribute="leading" id="Mt2-fx-hnC"/>
+                            <constraint firstAttribute="bottom" secondItem="J8N-rR-vtD" secondAttribute="bottom" id="N7O-5l-wDC"/>
+                            <constraint firstAttribute="trailing" secondItem="rl8-Aq-yd9" secondAttribute="trailing" id="Riu-K7-9HI"/>
+                            <constraint firstItem="J8N-rR-vtD" firstAttribute="leading" secondItem="IfV-5w-nil" secondAttribute="leading" id="ULO-H7-6bf"/>
+                            <constraint firstItem="4Oj-SG-5Qf" firstAttribute="centerY" secondItem="J8N-rR-vtD" secondAttribute="centerY" id="etp-Mb-9qC"/>
+                            <constraint firstAttribute="trailing" secondItem="J8N-rR-vtD" secondAttribute="trailing" id="nRJ-7y-SHW"/>
+                            <constraint firstAttribute="bottom" secondItem="rl8-Aq-yd9" secondAttribute="bottom" id="sL0-bE-Sfu"/>
+                            <constraint firstItem="J8N-rR-vtD" firstAttribute="top" secondItem="IfV-5w-nil" secondAttribute="top" id="vZB-DW-wNd"/>
+                            <constraint firstItem="4Oj-SG-5Qf" firstAttribute="centerX" secondItem="IfV-5w-nil" secondAttribute="centerX" id="x4B-7j-d8F"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="klx-gL-XFw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ETO-Re-vdX"/>
-                <constraint firstAttribute="trailing" secondItem="klx-gL-XFw" secondAttribute="trailing" id="Iab-lp-oce"/>
-                <constraint firstAttribute="bottom" secondItem="klx-gL-XFw" secondAttribute="bottom" id="P5A-d5-9gp"/>
-                <constraint firstItem="klx-gL-XFw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eIA-hF-vS0"/>
+                <constraint firstItem="IfV-5w-nil" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Au4-pF-mk5"/>
+                <constraint firstAttribute="trailing" secondItem="IfV-5w-nil" secondAttribute="trailing" id="QCc-ex-wDr"/>
+                <constraint firstAttribute="bottom" secondItem="IfV-5w-nil" secondAttribute="bottom" id="e0g-FE-39T"/>
+                <constraint firstItem="IfV-5w-nil" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ng1-vo-U7Y"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="347" height="225"/>
+            <connections>
+                <outlet property="btnPlayView" destination="4Oj-SG-5Qf" id="bf5-i0-U8l"/>
+                <outlet property="ivBackImage" destination="J8N-rR-vtD" id="KCj-ci-fFM"/>
+                <outlet property="mainView" destination="IfV-5w-nil" id="3UJ-yP-Sjj"/>
+                <outlet property="videoPlayView" destination="rl8-Aq-yd9" id="uSO-5D-8JM"/>
+            </connections>
             <point key="canvasLocation" x="352.89855072463769" y="200.55803571428569"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="download" width="316" height="159"/>
+        <image name="netflix-logo" width="636" height="636"/>
+        <image name="play.fill" catalog="system" width="58" height="64"/>
+        <namedColor name="primary-color">
+            <color red="0.082999996840953827" green="0.10499999672174454" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="tint-color">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

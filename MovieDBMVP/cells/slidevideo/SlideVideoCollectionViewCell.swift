@@ -8,33 +8,32 @@
 
 import UIKit
 import Kingfisher
-import YoutubePlayer_in_WKWebView
+import YouTubePlayer
 
 class SlideVideoCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var svContainer: UIView!
     @IBOutlet weak var ivBackImage: UIImageView!
-    @IBOutlet weak var playBtnView: PlayButton!
-    @IBOutlet weak var videoView: WKYTPlayerView!
+    @IBOutlet weak var videoView: YouTubePlayerView!
+    @IBOutlet weak var btnPlayVideo: UIButton!
     
     static var identifier : String {
         return "SlideVideoCollectionViewCell"
     }
     var videoKey : String?
     var mDelegate : VideoPlayDelegate!
+    var index :Int!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         videoView.isHidden = true
-        playBtnView.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(onTapPlayBtn(tapGestureRecognizer:))))
+       
     }
 
-    @objc func onTapPlayBtn(tapGestureRecognizer: UITapGestureRecognizer)
-    {
-       // mDelegate.onTapPlayButton(movieId: mData?.id ?? 0)
-//        print("video key \(self.mData?.key ?? "no link")")
-        self.videoView.isHidden = false
-        self.videoView.load(withVideoId: self.mData?.key ?? "")
+    @IBAction func onTapPlayBtn(_ sender: Any) {
+        videoView.isHidden = false
+        self.mDelegate.onTapPlayButton(movieId: (self.mData?.id)!, index: index, section: HomeSection.PagingVideo.rawValue)
     }
     
     var mData:MainVideoVO? = nil {
@@ -44,6 +43,17 @@ class SlideVideoCollectionViewCell: UICollectionViewCell {
             }
         }
     }
+    
+    var videoData:MovieVideoDetailVO? = nil {
+        didSet{
+            if let data = videoData{
+                self.videoView.isHidden = false
+                self.videoView.loadVideoID(data.key ?? "")
+                self.videoView.delegate = self
+            }
+        }
+    }
+    
     
     fileprivate func bindData(data:MainVideoVO){
         
@@ -71,4 +81,9 @@ class SlideVideoCollectionViewCell: UICollectionViewCell {
         }
     }
 
+}
+extension SlideVideoCollectionViewCell : YouTubePlayerDelegate {
+    func playerReady(_ videoPlayer: YouTubePlayerView) {
+        self.videoView.play()
+    }
 }

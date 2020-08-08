@@ -17,7 +17,14 @@ class PagingCollectionViewCell: UICollectionViewCell {
         return "PagingCollectionViewCell"
     }
     var currentPage = 0
+    var updateIndex : Int!
     
+    var videoDataList = [Int:MovieVideoDetailVO]() {
+        didSet{
+            self.cvSlideVideo.reloadItems(at: [IndexPath(row: updateIndex, section: 0)])
+
+        }
+    }
     //var dummeyItemCount = 5
     var slideVideoList : [MainVideoVO]?
     var movieVideo : MovieVideoDetailVO?
@@ -83,6 +90,15 @@ extension PagingCollectionViewCell : UICollectionViewDataSource, UICollectionVie
         }
         cell.mData = self.slideVideoList![indexPath.row]
         cell.mDelegate = self.mDelegate
+        cell.index = indexPath.row
+        
+        let id = self.slideVideoList![indexPath.row].id
+        for video in self.videoDataList {
+            if video.key == id {
+                cell.videoData = video.value
+            }
+        }
+        
         return cell
     }
     
