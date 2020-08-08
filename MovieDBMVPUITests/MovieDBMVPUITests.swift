@@ -79,11 +79,17 @@ class MovieDBMVPUITests: XCTestCase {
         
         let app = XCUIApplication()
         app.launch()
-        app.collectionViews.containing(.other, identifier:"Vertical scroll bar, 3 pages").children(matching: .scrollView).element(boundBy: 1).children(matching: .cell).element(boundBy: 1).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
-        
-        
-        app.scrollViews.otherElements.buttons[" PLAY TRAILER"].tap()
-        XCTAssertNotNil(app.children(matching: .window).element(boundBy: 1).children(matching: .other).element)
-        //close_detail_page_success()
+
+        //Tap "play" button
+        app.collectionViews.cells.collectionViews.cells.buttons["play.fill"].tap()
+        sleep(3)
+
+        //Tapping a coordinate point of the element
+        app.windows.element(boundBy: 0).coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.8)).tap()
+
+        sleep(2)
+        //Tap "Done" button from all the buttons visible on the screen
+        app.descendants(matching: .button)["Done"].tap()
     }
 }
+

@@ -24,6 +24,28 @@ class MockRealmHelper: XCTestCase {
 }
 
 extension MockRealmHelper : Dao {
+    func deleteOldMovieCredits() {
+        
+    }
+    
+    func saveFavoritedCast(data: MovieCastVO) -> Observable<Bool> {
+        return Observable<Bool>.create({ observer -> Disposable in
+            observer.onNext(true)
+            return Disposables.create {
+                
+            }
+        })
+    }
+    
+    func saveFavoritedMovie(data: MovieDetailVO) -> Observable<Bool> {
+        return Observable<Bool>.create({ observer -> Disposable in
+            observer.onNext(true)
+            return Disposables.create {
+                
+            }
+        })
+    }
+    
     
     func saveSlideVideos(data: [MainVideoVO]) -> Observable<Bool> {
         XCTAssertNotNil(data)
@@ -365,17 +387,17 @@ extension MockRealmHelper : Dao {
         })
     }
     
-    func deleteOldMovieCredits() {
-        <#code#>
-    }
-    
-    func saveFavoritedCast(data: MovieCastVO) -> Observable<Bool> {
-        <#code#>
-    }
-    
-    func saveFavoritedMovie(data: MovieDetailVO) -> Observable<Bool> {
-        <#code#>
-    }
+//    func deleteOldMovieCredits() {
+//        
+//    }
+//
+//    func saveFavoritedCast(data: MovieCastVO) -> Observable<Bool> {
+//
+//    }
+//
+//    func saveFavoritedMovie(data: MovieDetailVO) -> Observable<Bool> {
+//
+//    }
     
     
 }
